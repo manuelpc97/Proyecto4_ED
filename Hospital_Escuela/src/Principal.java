@@ -1,9 +1,15 @@
+
+import java.util.ArrayList;
+import javax.swing.DefaultComboBoxModel;
+import javax.swing.JComboBox;
+import javax.swing.JDialog;
+import javax.swing.JOptionPane;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 /**
  *
  * @author manuel
@@ -44,7 +50,7 @@ public class Principal extends javax.swing.JFrame {
         tf_direccionHospital = new javax.swing.JTextField();
         js_maxParamedicosHosp = new javax.swing.JSpinner();
         jLabel10 = new javax.swing.JLabel();
-        jb_rankingHospital = new javax.swing.JComboBox();
+        cb_rankingHospital = new javax.swing.JComboBox();
         bt_crearHospital = new javax.swing.JButton();
         js_maxAmbulanciasHosp = new javax.swing.JSpinner();
         jLabel11 = new javax.swing.JLabel();
@@ -55,7 +61,7 @@ public class Principal extends javax.swing.JFrame {
         tf_placaAmbulancia = new javax.swing.JTextField();
         tf_año_ambulancia = new javax.swing.JTextField();
         tf_speedAmbulancia = new javax.swing.JTextField();
-        jb_complejosAmbulancia = new javax.swing.JComboBox();
+        cb_complejosAmbulancia = new javax.swing.JComboBox();
         jLabel15 = new javax.swing.JLabel();
         bt_crearAmbulancia = new javax.swing.JButton();
         jLabel16 = new javax.swing.JLabel();
@@ -64,19 +70,56 @@ public class Principal extends javax.swing.JFrame {
         jLabel18 = new javax.swing.JLabel();
         jLabel19 = new javax.swing.JLabel();
         jLabel20 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
+        tf_nombreParamedico = new javax.swing.JTextField();
+        tf_edadParamedico = new javax.swing.JTextField();
         jLabel21 = new javax.swing.JLabel();
         jButton7 = new javax.swing.JButton();
-        jTextField3 = new javax.swing.JTextField();
-        jComboBox1 = new javax.swing.JComboBox();
-        jComboBox2 = new javax.swing.JComboBox();
+        tf_idParamedico = new javax.swing.JTextField();
+        cb_rankingParamedico = new javax.swing.JComboBox();
+        cb_complejoParamedico = new javax.swing.JComboBox();
         jLabel23 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
+        jd_eliminacion = new javax.swing.JDialog();
+        jLabel22 = new javax.swing.JLabel();
+        jTabbedPane2 = new javax.swing.JTabbedPane();
+        jPanel4 = new javax.swing.JPanel();
+        jLabel24 = new javax.swing.JLabel();
+        cb_eliminarComplejos = new javax.swing.JComboBox();
+        bt_eliminarComplejos = new javax.swing.JButton();
+        jLabel25 = new javax.swing.JLabel();
+        jPanel5 = new javax.swing.JPanel();
+        jLabel26 = new javax.swing.JLabel();
+        cb_eliminarAmbulancias = new javax.swing.JComboBox();
+        bt_eliminarAmbulacnias = new javax.swing.JButton();
+        jLabel27 = new javax.swing.JLabel();
+        jPanel6 = new javax.swing.JPanel();
+        jLabel28 = new javax.swing.JLabel();
+        cb_eliminarParamedicos = new javax.swing.JComboBox();
+        bt_eliminarParamedicos = new javax.swing.JButton();
+        jLabel29 = new javax.swing.JLabel();
+        jd_reasignacion = new javax.swing.JDialog();
+        jLabel30 = new javax.swing.JLabel();
+        jTabbedPane3 = new javax.swing.JTabbedPane();
+        jPanel7 = new javax.swing.JPanel();
+        jLabel31 = new javax.swing.JLabel();
+        jLabel32 = new javax.swing.JLabel();
+        cb_seleccionarAmbulancia = new javax.swing.JComboBox();
+        cb_complejosA = new javax.swing.JComboBox();
+        bt_seleccionarAmbulancia = new javax.swing.JButton();
+        bt_reasignarAmbulancia = new javax.swing.JButton();
+        jLabel33 = new javax.swing.JLabel();
+        jPanel8 = new javax.swing.JPanel();
+        jLabel34 = new javax.swing.JLabel();
+        jLabel35 = new javax.swing.JLabel();
+        cb_seleccionarParamedicos = new javax.swing.JComboBox();
+        cb_complejosP = new javax.swing.JComboBox();
+        bt_seleccionarParamedico = new javax.swing.JButton();
+        bt_reasignarParamedico = new javax.swing.JButton();
+        jLabel36 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
+        bt_Gestionar = new javax.swing.JButton();
+        bt_mapa = new javax.swing.JButton();
+        bt_emergencias = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
         jd_gestionRecursos.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -84,11 +127,21 @@ public class Principal extends javax.swing.JFrame {
         jButton4.setBackground(java.awt.Color.gray);
         jButton4.setForeground(new java.awt.Color(155, 11, 11));
         jButton4.setText("Crear Recursos");
+        jButton4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton4MouseClicked(evt);
+            }
+        });
         jd_gestionRecursos.getContentPane().add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 80, 232, 108));
 
         jButton5.setBackground(java.awt.Color.gray);
         jButton5.setForeground(new java.awt.Color(155, 11, 11));
         jButton5.setText("Eliminar Recursos");
+        jButton5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton5MouseClicked(evt);
+            }
+        });
         jd_gestionRecursos.getContentPane().add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 220, 232, 108));
 
         jLabel2.setFont(new java.awt.Font("Ubuntu", 1, 18)); // NOI18N
@@ -99,13 +152,24 @@ public class Principal extends javax.swing.JFrame {
         jButton6.setBackground(java.awt.Color.gray);
         jButton6.setForeground(new java.awt.Color(155, 11, 11));
         jButton6.setText("Reasignar Recursos");
+        jButton6.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton6MouseClicked(evt);
+            }
+        });
         jd_gestionRecursos.getContentPane().add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 360, 232, 108));
 
         jLabel4.setIcon(new javax.swing.ImageIcon("/home/manuel/Documentos/estructuraDeDatos/Proyecto4_ED/Hospital_Escuela/Imagenes/símbolo-de-la-medicina-16699269.jpg")); // NOI18N
-        jd_gestionRecursos.getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, 830, 580));
+        jd_gestionRecursos.getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 830, 590));
 
         jd_creacion.setBackground(java.awt.Color.darkGray);
         jd_creacion.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jTabbedPane1.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                jTabbedPane1StateChanged(evt);
+            }
+        });
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -137,10 +201,15 @@ public class Principal extends javax.swing.JFrame {
         jLabel10.setText("Grado Maximo de Emergencia");
         jPanel1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 270, -1, -1));
 
-        jb_rankingHospital.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "A", "B", "C", "D" }));
-        jPanel1.add(jb_rankingHospital, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 270, -1, -1));
+        cb_rankingHospital.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "A", "B", "C", "D" }));
+        jPanel1.add(cb_rankingHospital, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 270, -1, -1));
 
         bt_crearHospital.setText("Crear");
+        bt_crearHospital.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                bt_crearHospitalMouseClicked(evt);
+            }
+        });
         jPanel1.add(bt_crearHospital, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 330, 109, 64));
         jPanel1.add(js_maxAmbulanciasHosp, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 220, -1, -1));
 
@@ -169,7 +238,7 @@ public class Principal extends javax.swing.JFrame {
         jPanel2.add(tf_año_ambulancia, new org.netbeans.lib.awtextra.AbsoluteConstraints(267, 140, 212, -1));
         jPanel2.add(tf_speedAmbulancia, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 220, 160, -1));
 
-        jPanel2.add(jb_complejosAmbulancia, new org.netbeans.lib.awtextra.AbsoluteConstraints(269, 288, 110, -1));
+        jPanel2.add(cb_complejosAmbulancia, new org.netbeans.lib.awtextra.AbsoluteConstraints(269, 288, 110, -1));
 
         jLabel15.setFont(new java.awt.Font("Ubuntu", 1, 18)); // NOI18N
         jLabel15.setForeground(java.awt.Color.red);
@@ -177,6 +246,11 @@ public class Principal extends javax.swing.JFrame {
         jPanel2.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(88, 293, -1, -1));
 
         bt_crearAmbulancia.setText("Crear Ambulancia");
+        bt_crearAmbulancia.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                bt_crearAmbulanciaMouseClicked(evt);
+            }
+        });
         jPanel2.add(bt_crearAmbulancia, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 360, -1, -1));
 
         jLabel16.setIcon(new javax.swing.ImageIcon("/home/manuel/Documentos/estructuraDeDatos/Proyecto4_ED/Hospital_Escuela/Imagenes/Ambulancia-MB-Sprinter.jpg")); // NOI18N
@@ -205,8 +279,8 @@ public class Principal extends javax.swing.JFrame {
         jLabel20.setForeground(java.awt.Color.red);
         jLabel20.setText("Ranking");
         jPanel3.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(89, 265, -1, -1));
-        jPanel3.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 50, 251, -1));
-        jPanel3.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(218, 112, 251, -1));
+        jPanel3.add(tf_nombreParamedico, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 50, 251, -1));
+        jPanel3.add(tf_edadParamedico, new org.netbeans.lib.awtextra.AbsoluteConstraints(218, 112, 251, -1));
 
         jLabel21.setFont(new java.awt.Font("Ubuntu", 1, 18)); // NOI18N
         jLabel21.setForeground(java.awt.Color.red);
@@ -214,25 +288,201 @@ public class Principal extends javax.swing.JFrame {
         jPanel3.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(327, 265, -1, -1));
 
         jButton7.setText("Crear Paramedico");
+        jButton7.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton7MouseClicked(evt);
+            }
+        });
         jPanel3.add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(89, 372, -1, -1));
-        jPanel3.add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(218, 175, 251, -1));
+        jPanel3.add(tf_idParamedico, new org.netbeans.lib.awtextra.AbsoluteConstraints(218, 175, 251, -1));
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "A", "B", "C", "D" }));
-        jPanel3.add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 260, -1, -1));
+        cb_rankingParamedico.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "A", "B", "C", "D" }));
+        jPanel3.add(cb_rankingParamedico, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 260, -1, -1));
 
-        jPanel3.add(jComboBox2, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 260, 120, -1));
+        jPanel3.add(cb_complejoParamedico, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 260, 120, -1));
 
         jLabel23.setIcon(new javax.swing.ImageIcon("/home/manuel/Documentos/estructuraDeDatos/Proyecto4_ED/Hospital_Escuela/Imagenes/paramedicos-ISSAG-ATSA.jpg")); // NOI18N
         jPanel3.add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 640, 440));
 
         jTabbedPane1.addTab("Paramedicos", jPanel3);
 
-        jd_creacion.getContentPane().add(jTabbedPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 70, 643, -1));
+        jd_creacion.getContentPane().add(jTabbedPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 70, 643, 440));
 
         jLabel5.setFont(new java.awt.Font("Ubuntu", 1, 18)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(155, 11, 11));
         jLabel5.setText("Creacion de Recursos");
         jd_creacion.getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(217, 26, 222, -1));
+
+        jd_eliminacion.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel22.setFont(new java.awt.Font("Ubuntu", 1, 18)); // NOI18N
+        jLabel22.setForeground(new java.awt.Color(155, 11, 11));
+        jLabel22.setText("Eliminar Recursos");
+        jd_eliminacion.getContentPane().add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(163, 12, -1, -1));
+
+        jTabbedPane2.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                jTabbedPane2StateChanged(evt);
+            }
+        });
+
+        jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel24.setFont(new java.awt.Font("Ubuntu", 1, 18)); // NOI18N
+        jLabel24.setForeground(java.awt.Color.red);
+        jLabel24.setText("Complejos Hospitalarios");
+        jPanel4.add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(46, 74, -1, -1));
+
+        jPanel4.add(cb_eliminarComplejos, new org.netbeans.lib.awtextra.AbsoluteConstraints(56, 110, 128, -1));
+
+        bt_eliminarComplejos.setText("Eliminar");
+        bt_eliminarComplejos.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                bt_eliminarComplejosMouseClicked(evt);
+            }
+        });
+        jPanel4.add(bt_eliminarComplejos, new org.netbeans.lib.awtextra.AbsoluteConstraints(244, 109, -1, -1));
+
+        jLabel25.setIcon(new javax.swing.ImageIcon("/home/manuel/Documentos/estructuraDeDatos/Proyecto4_ED/Hospital_Escuela/Imagenes/570472_640px.jpg")); // NOI18N
+        jPanel4.add(jLabel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 500, 350));
+
+        jTabbedPane2.addTab("Complejos Hospitalarios", jPanel4);
+
+        jPanel5.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel26.setFont(new java.awt.Font("Ubuntu", 1, 18)); // NOI18N
+        jLabel26.setForeground(java.awt.Color.red);
+        jLabel26.setText("Ambulancias");
+        jPanel5.add(jLabel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(74, 83, -1, -1));
+
+        jPanel5.add(cb_eliminarAmbulancias, new org.netbeans.lib.awtextra.AbsoluteConstraints(74, 117, 130, -1));
+
+        bt_eliminarAmbulacnias.setText("Eliminar");
+        bt_eliminarAmbulacnias.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                bt_eliminarAmbulacniasMouseClicked(evt);
+            }
+        });
+        jPanel5.add(bt_eliminarAmbulacnias, new org.netbeans.lib.awtextra.AbsoluteConstraints(305, 116, 101, -1));
+
+        jLabel27.setIcon(new javax.swing.ImageIcon("/home/manuel/Documentos/estructuraDeDatos/Proyecto4_ED/Hospital_Escuela/Imagenes/Ambulancia-MB-Sprinter.jpg")); // NOI18N
+        jPanel5.add(jLabel27, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 500, 350));
+
+        jTabbedPane2.addTab("Ambulancias", jPanel5);
+
+        jPanel6.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel28.setFont(new java.awt.Font("Ubuntu", 1, 18)); // NOI18N
+        jLabel28.setForeground(java.awt.Color.red);
+        jLabel28.setText("Paramedicos");
+        jPanel6.add(jLabel28, new org.netbeans.lib.awtextra.AbsoluteConstraints(58, 80, -1, -1));
+
+        jPanel6.add(cb_eliminarParamedicos, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 120, 131, -1));
+
+        bt_eliminarParamedicos.setText("Eliminar");
+        bt_eliminarParamedicos.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                bt_eliminarParamedicosMouseClicked(evt);
+            }
+        });
+        jPanel6.add(bt_eliminarParamedicos, new org.netbeans.lib.awtextra.AbsoluteConstraints(289, 119, -1, -1));
+
+        jLabel29.setIcon(new javax.swing.ImageIcon("/home/manuel/Documentos/estructuraDeDatos/Proyecto4_ED/Hospital_Escuela/Imagenes/paramedicos-ISSAG-ATSA.jpg")); // NOI18N
+        jPanel6.add(jLabel29, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 500, 350));
+
+        jTabbedPane2.addTab("Paramedicos", jPanel6);
+
+        jd_eliminacion.getContentPane().add(jTabbedPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 39, -1, -1));
+
+        jd_reasignacion.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel30.setFont(new java.awt.Font("Ubuntu", 1, 18)); // NOI18N
+        jLabel30.setForeground(new java.awt.Color(155, 11, 11));
+        jLabel30.setText("Reasignacion de Recursos");
+        jd_reasignacion.getContentPane().add(jLabel30, new org.netbeans.lib.awtextra.AbsoluteConstraints(178, 23, -1, -1));
+
+        jTabbedPane3.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                jTabbedPane3StateChanged(evt);
+            }
+        });
+
+        jPanel7.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel31.setFont(new java.awt.Font("Ubuntu", 1, 18)); // NOI18N
+        jLabel31.setForeground(java.awt.Color.red);
+        jLabel31.setText("Ambulancias");
+        jPanel7.add(jLabel31, new org.netbeans.lib.awtextra.AbsoluteConstraints(48, 32, -1, -1));
+
+        jLabel32.setFont(new java.awt.Font("Ubuntu", 1, 18)); // NOI18N
+        jLabel32.setForeground(java.awt.Color.red);
+        jLabel32.setText("Complejo");
+        jPanel7.add(jLabel32, new org.netbeans.lib.awtextra.AbsoluteConstraints(59, 131, -1, -1));
+
+        jPanel7.add(cb_seleccionarAmbulancia, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 30, 155, -1));
+
+        jPanel7.add(cb_complejosA, new org.netbeans.lib.awtextra.AbsoluteConstraints(181, 126, 155, -1));
+
+        bt_seleccionarAmbulancia.setText("Seleccionar");
+        bt_seleccionarAmbulancia.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                bt_seleccionarAmbulanciaMouseClicked(evt);
+            }
+        });
+        jPanel7.add(bt_seleccionarAmbulancia, new org.netbeans.lib.awtextra.AbsoluteConstraints(381, 26, -1, -1));
+
+        bt_reasignarAmbulancia.setText("Reasignar");
+        bt_reasignarAmbulancia.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                bt_reasignarAmbulanciaMouseClicked(evt);
+            }
+        });
+        jPanel7.add(bt_reasignarAmbulancia, new org.netbeans.lib.awtextra.AbsoluteConstraints(395, 125, -1, -1));
+
+        jLabel33.setIcon(new javax.swing.ImageIcon("/home/manuel/Documentos/estructuraDeDatos/Proyecto4_ED/Hospital_Escuela/Imagenes/Ambulancia-MB-Sprinter.jpg")); // NOI18N
+        jPanel7.add(jLabel33, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 520, 250));
+
+        jTabbedPane3.addTab("Ambulancias", jPanel7);
+
+        jPanel8.setForeground(java.awt.Color.red);
+        jPanel8.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel34.setFont(new java.awt.Font("Ubuntu", 1, 18)); // NOI18N
+        jLabel34.setForeground(java.awt.Color.red);
+        jLabel34.setText("Paramedicos");
+        jPanel8.add(jLabel34, new org.netbeans.lib.awtextra.AbsoluteConstraints(49, 54, -1, -1));
+
+        jLabel35.setFont(new java.awt.Font("Ubuntu", 1, 18)); // NOI18N
+        jLabel35.setForeground(java.awt.Color.red);
+        jLabel35.setText("Complejo");
+        jPanel8.add(jLabel35, new org.netbeans.lib.awtextra.AbsoluteConstraints(49, 140, -1, -1));
+
+        jPanel8.add(cb_seleccionarParamedicos, new org.netbeans.lib.awtextra.AbsoluteConstraints(195, 52, 146, -1));
+
+        jPanel8.add(cb_complejosP, new org.netbeans.lib.awtextra.AbsoluteConstraints(195, 138, 146, -1));
+
+        bt_seleccionarParamedico.setText("Seleccionar");
+        bt_seleccionarParamedico.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                bt_seleccionarParamedicoMouseClicked(evt);
+            }
+        });
+        jPanel8.add(bt_seleccionarParamedico, new org.netbeans.lib.awtextra.AbsoluteConstraints(378, 51, -1, -1));
+
+        bt_reasignarParamedico.setText("Reasignar");
+        bt_reasignarParamedico.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                bt_reasignarParamedicoMouseClicked(evt);
+            }
+        });
+        jPanel8.add(bt_reasignarParamedico, new org.netbeans.lib.awtextra.AbsoluteConstraints(378, 137, -1, -1));
+
+        jLabel36.setIcon(new javax.swing.ImageIcon("/home/manuel/Documentos/estructuraDeDatos/Proyecto4_ED/Hospital_Escuela/Imagenes/paramedicos-ISSAG-ATSA.jpg")); // NOI18N
+        jPanel8.add(jLabel36, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 520, 250));
+
+        jTabbedPane3.addTab("Paramedicos", jPanel8);
+
+        jd_reasignacion.getContentPane().add(jTabbedPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 50, 529, -1));
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -242,26 +492,242 @@ public class Principal extends javax.swing.JFrame {
         jLabel3.setText("Hospital Escuela Universitario");
         getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, -1, 50));
 
-        jButton1.setBackground(java.awt.Color.gray);
-        jButton1.setForeground(new java.awt.Color(155, 11, 11));
-        jButton1.setText("Gestionar Recursos");
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 120, 240, 110));
+        bt_Gestionar.setBackground(java.awt.Color.gray);
+        bt_Gestionar.setForeground(new java.awt.Color(155, 11, 11));
+        bt_Gestionar.setText("Gestionar Recursos");
+        bt_Gestionar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                bt_GestionarMouseClicked(evt);
+            }
+        });
+        getContentPane().add(bt_Gestionar, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 120, 240, 110));
 
-        jButton2.setBackground(java.awt.Color.gray);
-        jButton2.setForeground(new java.awt.Color(155, 11, 11));
-        jButton2.setText("Mapa de La Ciudad");
-        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 260, 240, 110));
+        bt_mapa.setBackground(java.awt.Color.gray);
+        bt_mapa.setForeground(new java.awt.Color(155, 11, 11));
+        bt_mapa.setText("Mapa de La Ciudad");
+        getContentPane().add(bt_mapa, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 260, 240, 110));
 
-        jButton3.setBackground(java.awt.Color.gray);
-        jButton3.setForeground(new java.awt.Color(155, 11, 11));
-        jButton3.setText("Gestion de Emergencias");
-        getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 400, 240, 110));
+        bt_emergencias.setBackground(java.awt.Color.gray);
+        bt_emergencias.setForeground(new java.awt.Color(155, 11, 11));
+        bt_emergencias.setText("Gestion de Emergencias");
+        getContentPane().add(bt_emergencias, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 400, 240, 110));
 
         jLabel1.setIcon(new javax.swing.ImageIcon("/home/manuel/Documentos/estructuraDeDatos/Proyecto4_ED/Hospital_Escuela/Imagenes/símbolo-de-la-medicina-16699269.jpg")); // NOI18N
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 820, 590));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void bt_GestionarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bt_GestionarMouseClicked
+        showDialog(this.jd_gestionRecursos);
+    }//GEN-LAST:event_bt_GestionarMouseClicked
+
+    private void jButton4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton4MouseClicked
+        this.jd_gestionRecursos.setVisible(false);
+        showDialog(this.jd_creacion);
+    }//GEN-LAST:event_jButton4MouseClicked
+
+    private void jButton5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton5MouseClicked
+        this.jd_gestionRecursos.setVisible(false);
+        this.listInComboBox(hospitales, this.cb_eliminarComplejos);
+        this.ambulanciaInComboBox(ambulancias, this.cb_eliminarAmbulancias);
+        this.paramedicoInComboBox(paramedicos, this.cb_eliminarParamedicos);
+        showDialog(this.jd_eliminacion);
+    }//GEN-LAST:event_jButton5MouseClicked
+
+    private void jButton6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton6MouseClicked
+        this.jd_gestionRecursos.setVisible(false);
+        this.listInComboBox(hospitales, this.cb_complejosA);
+        this.listInComboBox(hospitales, this.cb_complejosP);
+        this.ambulanciaInComboBox(ambulancias, this.cb_seleccionarAmbulancia);
+        this.paramedicoInComboBox(paramedicos, this.cb_seleccionarParamedicos);
+        showDialog(this.jd_reasignacion);
+    }//GEN-LAST:event_jButton6MouseClicked
+
+    private void bt_crearHospitalMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bt_crearHospitalMouseClicked
+        String nombre;
+        String direccion;
+        int maxParamedicos;
+        int maxAmbulancias;
+        String ranking;
+
+        nombre = this.tf_nombreHospital.getText();
+        direccion = this.tf_direccionHospital.getText();
+        maxParamedicos = Integer.parseInt(this.js_maxParamedicosHosp.getValue().toString());
+        maxAmbulancias = Integer.parseInt(this.js_maxAmbulanciasHosp.getValue().toString());
+        ranking = this.cb_rankingHospital.getSelectedItem().toString();
+
+        hospitales.add(new Hospital(maxParamedicos, maxAmbulancias, getRanking(ranking), nombre, direccion));
+        JOptionPane.showMessageDialog(this, "Hospital creado con exito", "Atencion", JOptionPane.INFORMATION_MESSAGE);
+        this.tf_nombreHospital.setText("");
+        this.tf_direccionHospital.setText("");
+        this.js_maxParamedicosHosp.setValue(0);
+        this.js_maxAmbulanciasHosp.setValue(0);
+        listInComboBox(hospitales, this.cb_complejosAmbulancia);
+        listInComboBox(hospitales, this.cb_complejoParamedico);
+    }//GEN-LAST:event_bt_crearHospitalMouseClicked
+
+    private void jTabbedPane1StateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jTabbedPane1StateChanged
+        listInComboBox(hospitales, this.cb_complejosAmbulancia);
+        listInComboBox(hospitales, this.cb_complejoParamedico);
+    }//GEN-LAST:event_jTabbedPane1StateChanged
+
+    private void bt_crearAmbulanciaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bt_crearAmbulanciaMouseClicked
+        String placa;
+        String año;
+        double velocidad;
+        Hospital temporal = new Hospital();
+
+        placa = this.tf_placaAmbulancia.getText();
+        año = this.tf_año_ambulancia.getText();
+        velocidad = Double.parseDouble(this.tf_speedAmbulancia.getText());
+        temporal = (Hospital) this.cb_complejosAmbulancia.getSelectedItem();
+
+        ambulancias.add(new Ambulancia(placa, año, velocidad, temporal));
+        temporal.addAmbulancia(ambulancias.get(ambulancias.size() - 1));
+        JOptionPane.showMessageDialog(this, "Ambulancia creada con exito", "Atencion", JOptionPane.INFORMATION_MESSAGE);
+        this.tf_año_ambulancia.setText("");
+        this.tf_placaAmbulancia.setText("");
+        this.tf_speedAmbulancia.setText("");
+    }//GEN-LAST:event_bt_crearAmbulanciaMouseClicked
+
+    private void jButton7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton7MouseClicked
+        String nombre;
+        int edad;
+        String id;
+        String ranking;
+        Hospital temporal = new Hospital();
+
+        nombre = this.tf_nombreParamedico.getText();
+        edad = Integer.parseInt(this.tf_edadParamedico.getText());
+        id = this.tf_idParamedico.getText();
+        ranking = this.cb_rankingParamedico.getSelectedItem().toString();
+        temporal = (Hospital) this.cb_complejoParamedico.getSelectedItem();
+
+        paramedicos.add(new Paramedico(nombre, edad, id, getRanking(ranking), temporal));
+        temporal.addParamedico(paramedicos.get(paramedicos.size() - 1));
+        JOptionPane.showMessageDialog(this, "Paramedico creado con exito", "Atencion", JOptionPane.INFORMATION_MESSAGE);
+        this.tf_nombreParamedico.setText("");
+        this.tf_edadParamedico.setText("");
+        this.tf_idParamedico.setText("");
+    }//GEN-LAST:event_jButton7MouseClicked
+
+    private void bt_eliminarComplejosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bt_eliminarComplejosMouseClicked
+        hospitalTemporal = (Hospital) this.cb_eliminarComplejos.getSelectedItem();
+        hospitales.remove(hospitalTemporal);
+        listInComboBox(hospitales, this.cb_eliminarComplejos);
+        JOptionPane.showMessageDialog(this, "Hospital eliminado con exito", "Atencion", JOptionPane.INFORMATION_MESSAGE);
+    }//GEN-LAST:event_bt_eliminarComplejosMouseClicked
+
+    private void jTabbedPane2StateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jTabbedPane2StateChanged
+        this.listInComboBox(hospitales, this.cb_eliminarComplejos);
+        this.ambulanciaInComboBox(ambulancias, this.cb_eliminarAmbulancias);
+        this.paramedicoInComboBox(paramedicos, this.cb_eliminarParamedicos);
+    }//GEN-LAST:event_jTabbedPane2StateChanged
+
+    private void bt_eliminarAmbulacniasMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bt_eliminarAmbulacniasMouseClicked
+        ambulanciaTemporal = (Ambulancia) this.cb_eliminarAmbulancias.getSelectedItem();
+        ambulanciaTemporal.getComplejo().getAmbulancias().remove(ambulanciaTemporal);
+        ambulancias.remove(ambulanciaTemporal);
+        this.ambulanciaInComboBox(ambulancias, this.cb_eliminarAmbulancias);
+        JOptionPane.showMessageDialog(this, "Ambulancia eliminada con exito", "Atencion", JOptionPane.INFORMATION_MESSAGE);
+    }//GEN-LAST:event_bt_eliminarAmbulacniasMouseClicked
+
+    private void bt_eliminarParamedicosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bt_eliminarParamedicosMouseClicked
+        paramedicoTemporal = (Paramedico) this.cb_eliminarParamedicos.getSelectedItem();
+        paramedicoTemporal.getComplejo().getParamedicos().remove(paramedicoTemporal);
+        paramedicos.remove(paramedicoTemporal);
+        this.paramedicoInComboBox(paramedicos, this.cb_eliminarParamedicos);
+        JOptionPane.showMessageDialog(this, "Paramedico eliminado con exito", "Atencion", JOptionPane.INFORMATION_MESSAGE);
+    }//GEN-LAST:event_bt_eliminarParamedicosMouseClicked
+
+    private void jTabbedPane3StateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jTabbedPane3StateChanged
+        this.listInComboBox(hospitales, this.cb_complejosA);
+        this.listInComboBox(hospitales, this.cb_complejosP);
+        this.ambulanciaInComboBox(ambulancias, this.cb_seleccionarAmbulancia);
+        this.paramedicoInComboBox(paramedicos, this.cb_seleccionarParamedicos);
+    }//GEN-LAST:event_jTabbedPane3StateChanged
+
+    private void bt_seleccionarAmbulanciaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bt_seleccionarAmbulanciaMouseClicked
+        ambulanciaTemporal = (Ambulancia) this.cb_seleccionarAmbulancia.getSelectedItem();
+        contador1++;
+        JOptionPane.showMessageDialog(this, "Ambulancia seleccionada con exito", "Atencion", JOptionPane.INFORMATION_MESSAGE);
+    }//GEN-LAST:event_bt_seleccionarAmbulanciaMouseClicked
+
+    private void bt_reasignarAmbulanciaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bt_reasignarAmbulanciaMouseClicked
+        if (contador1 == 1) {
+            hospitalTemporal = (Hospital) this.cb_complejosA.getSelectedItem();
+            ambulanciaTemporal.getComplejo().getAmbulancias().remove(ambulanciaTemporal);
+            ambulanciaTemporal.setComplejo(hospitalTemporal);
+            hospitalTemporal.addAmbulancia(ambulanciaTemporal);
+            contador1 = 0;
+            JOptionPane.showMessageDialog(this, "Ambulancia reasignada con exito", "Atencion", JOptionPane.INFORMATION_MESSAGE);
+        } else {
+            JOptionPane.showMessageDialog(this, "Necesita seleccionar una ambulancia", "Atencion", JOptionPane.INFORMATION_MESSAGE);
+        }
+    }//GEN-LAST:event_bt_reasignarAmbulanciaMouseClicked
+
+    private void bt_seleccionarParamedicoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bt_seleccionarParamedicoMouseClicked
+        paramedicoTemporal = (Paramedico)this.cb_seleccionarParamedicos.getSelectedItem();
+        contador2++;
+        JOptionPane.showMessageDialog(this, "Paramedico seleccionado con exito", "Atencion", JOptionPane.INFORMATION_MESSAGE);
+    }//GEN-LAST:event_bt_seleccionarParamedicoMouseClicked
+
+    private void bt_reasignarParamedicoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bt_reasignarParamedicoMouseClicked
+        if(contador2 == 1){
+            hospitalTemporal = (Hospital)this.cb_complejosP.getSelectedItem();
+            paramedicoTemporal.getComplejo().getParamedicos().remove(paramedicoTemporal);
+            paramedicoTemporal.setComplejo(hospitalTemporal);
+            hospitalTemporal.addParamedico(paramedicoTemporal);
+            contador2 = 0;
+            JOptionPane.showMessageDialog(this, "Paramedico reasignado con exito", "Atencion", JOptionPane.INFORMATION_MESSAGE);
+        }else{
+            JOptionPane.showMessageDialog(this, "Necesita seleccionar un paramedico", "Atencion", JOptionPane.INFORMATION_MESSAGE);
+        }
+    }//GEN-LAST:event_bt_reasignarParamedicoMouseClicked
+
+    public void listInComboBox(ArrayList<Hospital> lista, JComboBox box) {
+        DefaultComboBoxModel modelo = new DefaultComboBoxModel();
+        for (int i = 0; i < lista.size(); i++) {
+            modelo.addElement(lista.get(i));
+        }
+        box.setModel(modelo);
+    }
+
+    public void ambulanciaInComboBox(ArrayList<Ambulancia> lista, JComboBox box) {
+        DefaultComboBoxModel modelo = new DefaultComboBoxModel();
+        for (int i = 0; i < lista.size(); i++) {
+            modelo.addElement(lista.get(i));
+        }
+        box.setModel(modelo);
+    }
+
+    public void paramedicoInComboBox(ArrayList<Paramedico> lista, JComboBox box) {
+        DefaultComboBoxModel modelo = new DefaultComboBoxModel();
+        for (int i = 0; i < lista.size(); i++) {
+            modelo.addElement(lista.get(i));
+        }
+        box.setModel(modelo);
+    }
+
+    public void showDialog(JDialog ventana) {
+        ventana.pack();
+        ventana.setLocationRelativeTo(this);
+        ventana.setVisible(true);
+    }
+
+    public int getRanking(String letra) {
+        if (letra == "A") {
+            return 4;
+        } else if (letra == "B") {
+            return 3;
+        } else if (letra == "C") {
+            return 2;
+        } else if (letra == "D") {
+            return 1;
+        }
+        return -1;
+    }
 
     /**
      * @param args the command line arguments
@@ -299,17 +765,33 @@ public class Principal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton bt_Gestionar;
     private javax.swing.JButton bt_crearAmbulancia;
     private javax.swing.JButton bt_crearHospital;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
+    private javax.swing.JButton bt_eliminarAmbulacnias;
+    private javax.swing.JButton bt_eliminarComplejos;
+    private javax.swing.JButton bt_eliminarParamedicos;
+    private javax.swing.JButton bt_emergencias;
+    private javax.swing.JButton bt_mapa;
+    private javax.swing.JButton bt_reasignarAmbulancia;
+    private javax.swing.JButton bt_reasignarParamedico;
+    private javax.swing.JButton bt_seleccionarAmbulancia;
+    private javax.swing.JButton bt_seleccionarParamedico;
+    private javax.swing.JComboBox cb_complejoParamedico;
+    private javax.swing.JComboBox cb_complejosA;
+    private javax.swing.JComboBox cb_complejosAmbulancia;
+    private javax.swing.JComboBox cb_complejosP;
+    private javax.swing.JComboBox cb_eliminarAmbulancias;
+    private javax.swing.JComboBox cb_eliminarComplejos;
+    private javax.swing.JComboBox cb_eliminarParamedicos;
+    private javax.swing.JComboBox cb_rankingHospital;
+    private javax.swing.JComboBox cb_rankingParamedico;
+    private javax.swing.JComboBox cb_seleccionarAmbulancia;
+    private javax.swing.JComboBox cb_seleccionarParamedicos;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton7;
-    private javax.swing.JComboBox jComboBox1;
-    private javax.swing.JComboBox jComboBox2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -324,8 +806,22 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel21;
+    private javax.swing.JLabel jLabel22;
     private javax.swing.JLabel jLabel23;
+    private javax.swing.JLabel jLabel24;
+    private javax.swing.JLabel jLabel25;
+    private javax.swing.JLabel jLabel26;
+    private javax.swing.JLabel jLabel27;
+    private javax.swing.JLabel jLabel28;
+    private javax.swing.JLabel jLabel29;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel30;
+    private javax.swing.JLabel jLabel31;
+    private javax.swing.JLabel jLabel32;
+    private javax.swing.JLabel jLabel33;
+    private javax.swing.JLabel jLabel34;
+    private javax.swing.JLabel jLabel35;
+    private javax.swing.JLabel jLabel36;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
@@ -335,20 +831,35 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel4;
+    private javax.swing.JPanel jPanel5;
+    private javax.swing.JPanel jPanel6;
+    private javax.swing.JPanel jPanel7;
+    private javax.swing.JPanel jPanel8;
     private javax.swing.JTabbedPane jTabbedPane1;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JComboBox jb_complejosAmbulancia;
-    private javax.swing.JComboBox jb_rankingHospital;
+    private javax.swing.JTabbedPane jTabbedPane2;
+    private javax.swing.JTabbedPane jTabbedPane3;
     private javax.swing.JDialog jd_creacion;
+    private javax.swing.JDialog jd_eliminacion;
     private javax.swing.JDialog jd_gestionRecursos;
+    private javax.swing.JDialog jd_reasignacion;
     private javax.swing.JSpinner js_maxAmbulanciasHosp;
     private javax.swing.JSpinner js_maxParamedicosHosp;
     private javax.swing.JTextField tf_año_ambulancia;
     private javax.swing.JTextField tf_direccionHospital;
+    private javax.swing.JTextField tf_edadParamedico;
+    private javax.swing.JTextField tf_idParamedico;
     private javax.swing.JTextField tf_nombreHospital;
+    private javax.swing.JTextField tf_nombreParamedico;
     private javax.swing.JTextField tf_placaAmbulancia;
     private javax.swing.JTextField tf_speedAmbulancia;
     // End of variables declaration//GEN-END:variables
+ArrayList<Hospital> hospitales = new ArrayList();
+    ArrayList<Ambulancia> ambulancias = new ArrayList();
+    ArrayList<Paramedico> paramedicos = new ArrayList();
+    Hospital hospitalTemporal = new Hospital();
+    Paramedico paramedicoTemporal = new Paramedico();
+    Ambulancia ambulanciaTemporal = new Ambulancia();
+    int contador1 = 0;
+    int contador2 = 0;
 }

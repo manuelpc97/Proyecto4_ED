@@ -1,17 +1,23 @@
+
+import java.util.ArrayList;
+
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 /**
  *
  * @author manuel
  */
-public class Hospital extends Ubicacion{
+public class Hospital extends Ubicacion {
+
     int maxParamedicos;
     int maxAmbulancias;
     int ranking;
+    ArrayList<Ambulancia> ambulancias = new ArrayList();
+    ArrayList<Paramedico> paramedicos = new ArrayList();
 
     public Hospital() {
     }
@@ -21,6 +27,7 @@ public class Hospital extends Ubicacion{
         this.maxParamedicos = maxParamedicos;
         this.maxAmbulancias = maxAmbulancias;
         this.ranking = ranking;
+
     }
 
     public int getMaxParamedicos() {
@@ -45,6 +52,22 @@ public class Hospital extends Ubicacion{
 
     public void setRanking(int ranking) {
         this.ranking = ranking;
+    }
+
+    public ArrayList<Ambulancia> getAmbulancias() {
+        return ambulancias;
+    }
+
+    public ArrayList<Paramedico> getParamedicos() {
+        return paramedicos;
+    }
+
+    public void addAmbulancia(Ambulancia nueva) {
+        this.ambulancias.add(nueva);
+    }
+
+    public void addParamedico(Paramedico nuevo) {
+        this.getParamedicos().add(nuevo);
     }
 
     @Override
