@@ -583,9 +583,13 @@ public class Principal extends javax.swing.JFrame {
         velocidad = Double.parseDouble(this.tf_speedAmbulancia.getText());
         temporal = (Hospital) this.cb_complejosAmbulancia.getSelectedItem();
 
-        ambulancias.add(new Ambulancia(placa, año, velocidad, temporal));
-        temporal.addAmbulancia(ambulancias.get(ambulancias.size() - 1));
-        JOptionPane.showMessageDialog(this, "Ambulancia creada con exito", "Atencion", JOptionPane.INFORMATION_MESSAGE);
+        if (temporal.getAmbulancias().size() < temporal.getMaxAmbulancias()) {
+            ambulancias.add(new Ambulancia(placa, año, velocidad, temporal));
+            temporal.addAmbulancia(ambulancias.get(ambulancias.size() - 1));
+            JOptionPane.showMessageDialog(this, "Ambulancia creada con exito", "Atencion", JOptionPane.INFORMATION_MESSAGE);
+        } else {
+            JOptionPane.showMessageDialog(this, "Ya no hay lugar para mas ambulancias en el hospital", "ERROR!!!", JOptionPane.ERROR_MESSAGE);
+        }
         this.tf_año_ambulancia.setText("");
         this.tf_placaAmbulancia.setText("");
         this.tf_speedAmbulancia.setText("");
@@ -604,9 +608,14 @@ public class Principal extends javax.swing.JFrame {
         ranking = this.cb_rankingParamedico.getSelectedItem().toString();
         temporal = (Hospital) this.cb_complejoParamedico.getSelectedItem();
 
-        paramedicos.add(new Paramedico(nombre, edad, id, getRanking(ranking), temporal));
-        temporal.addParamedico(paramedicos.get(paramedicos.size() - 1));
-        JOptionPane.showMessageDialog(this, "Paramedico creado con exito", "Atencion", JOptionPane.INFORMATION_MESSAGE);
+        if (temporal.getParamedicos().size() < temporal.getMaxParamedicos()) {
+            paramedicos.add(new Paramedico(nombre, edad, id, getRanking(ranking), temporal));
+            temporal.addParamedico(paramedicos.get(paramedicos.size() - 1));
+            JOptionPane.showMessageDialog(this, "Paramedico creado con exito", "Atencion", JOptionPane.INFORMATION_MESSAGE);
+        } else {
+            JOptionPane.showMessageDialog(this, "No hay lugar para mas paramedicos en el hospital", "ERROR", JOptionPane.ERROR_MESSAGE);
+        }
+
         this.tf_nombreParamedico.setText("");
         this.tf_edadParamedico.setText("");
         this.tf_idParamedico.setText("");
@@ -657,31 +666,43 @@ public class Principal extends javax.swing.JFrame {
     private void bt_reasignarAmbulanciaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bt_reasignarAmbulanciaMouseClicked
         if (contador1 == 1) {
             hospitalTemporal = (Hospital) this.cb_complejosA.getSelectedItem();
-            ambulanciaTemporal.getComplejo().getAmbulancias().remove(ambulanciaTemporal);
-            ambulanciaTemporal.setComplejo(hospitalTemporal);
-            hospitalTemporal.addAmbulancia(ambulanciaTemporal);
-            contador1 = 0;
-            JOptionPane.showMessageDialog(this, "Ambulancia reasignada con exito", "Atencion", JOptionPane.INFORMATION_MESSAGE);
+
+            if (hospitalTemporal.getAmbulancias().size() < hospitalTemporal.getMaxAmbulancias()) {
+                ambulanciaTemporal.getComplejo().getAmbulancias().remove(ambulanciaTemporal);
+                ambulanciaTemporal.setComplejo(hospitalTemporal);
+                hospitalTemporal.addAmbulancia(ambulanciaTemporal);
+                contador1 = 0;
+                JOptionPane.showMessageDialog(this, "Ambulancia reasignada con exito", "Atencion", JOptionPane.INFORMATION_MESSAGE);
+            } else {
+                contador1 = 0;
+                JOptionPane.showMessageDialog(this, "Error en la reasignacion", "Atencion", JOptionPane.ERROR_MESSAGE);
+            }
         } else {
             JOptionPane.showMessageDialog(this, "Necesita seleccionar una ambulancia", "Atencion", JOptionPane.INFORMATION_MESSAGE);
         }
     }//GEN-LAST:event_bt_reasignarAmbulanciaMouseClicked
 
     private void bt_seleccionarParamedicoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bt_seleccionarParamedicoMouseClicked
-        paramedicoTemporal = (Paramedico)this.cb_seleccionarParamedicos.getSelectedItem();
+        paramedicoTemporal = (Paramedico) this.cb_seleccionarParamedicos.getSelectedItem();
         contador2++;
         JOptionPane.showMessageDialog(this, "Paramedico seleccionado con exito", "Atencion", JOptionPane.INFORMATION_MESSAGE);
     }//GEN-LAST:event_bt_seleccionarParamedicoMouseClicked
 
     private void bt_reasignarParamedicoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bt_reasignarParamedicoMouseClicked
-        if(contador2 == 1){
-            hospitalTemporal = (Hospital)this.cb_complejosP.getSelectedItem();
-            paramedicoTemporal.getComplejo().getParamedicos().remove(paramedicoTemporal);
-            paramedicoTemporal.setComplejo(hospitalTemporal);
-            hospitalTemporal.addParamedico(paramedicoTemporal);
-            contador2 = 0;
-            JOptionPane.showMessageDialog(this, "Paramedico reasignado con exito", "Atencion", JOptionPane.INFORMATION_MESSAGE);
-        }else{
+        if (contador2 == 1) {
+            hospitalTemporal = (Hospital) this.cb_complejosP.getSelectedItem();
+
+            if (hospitalTemporal.getParamedicos().size() < hospitalTemporal.getMaxParamedicos()) {
+                paramedicoTemporal.getComplejo().getParamedicos().remove(paramedicoTemporal);
+                paramedicoTemporal.setComplejo(hospitalTemporal);
+                hospitalTemporal.addParamedico(paramedicoTemporal);
+                contador2 = 0;
+                JOptionPane.showMessageDialog(this, "Paramedico reasignado con exito", "Atencion", JOptionPane.INFORMATION_MESSAGE);
+            } else {
+                JOptionPane.showMessageDialog(this, "Error en la reasignacion", "Atencion", JOptionPane.ERROR_MESSAGE);
+                contador2 = 0;
+            }
+        } else {
             JOptionPane.showMessageDialog(this, "Necesita seleccionar un paramedico", "Atencion", JOptionPane.INFORMATION_MESSAGE);
         }
     }//GEN-LAST:event_bt_reasignarParamedicoMouseClicked
