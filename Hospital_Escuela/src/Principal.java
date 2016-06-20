@@ -6,7 +6,7 @@ import javax.swing.JDialog;
 import javax.swing.JOptionPane;
 import org.graphstream.graph.*;
 import org.graphstream.graph.implementations.*;
-
+import org.graphstream.algorithm.*;
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -823,7 +823,19 @@ public class Principal extends javax.swing.JFrame {
         maxParamedicos = Integer.parseInt(this.js_maxParamedicosHosp.getValue().toString());
         maxAmbulancias = Integer.parseInt(this.js_maxAmbulanciasHosp.getValue().toString());
         ranking = this.cb_rankingHospital.getSelectedItem().toString();
-
+        
+        int num = getRanking(ranking);
+        Emergencia emergencia = Emergencia.A;
+        
+        if(num == 4){
+            emergencia = Emergencia.A;
+        }else if(num == 3){
+            emergencia = Emergencia.B;
+        }else if(num == 2){
+            emergencia = Emergencia.C;
+        }else if(num == 1){
+            emergencia = Emergencia.D;
+        }
         for (int i = 0; i < hospitales.size(); i++) {
             if (hospitales.get(i).getNombre() == nombre) {
                 seguir = false;
@@ -831,7 +843,7 @@ public class Principal extends javax.swing.JFrame {
         }
 
         if (seguir) {
-            hospitales.add(new Hospital(maxParamedicos, maxAmbulancias, getRanking(ranking), nombre, direccion));
+            hospitales.add(new Hospital(maxParamedicos, maxAmbulancias, emergencia, nombre, direccion));
             JOptionPane.showMessageDialog(this, "Hospital creado con exito", "Atencion", JOptionPane.INFORMATION_MESSAGE);
         } else {
             JOptionPane.showMessageDialog(this, "No se pueden crear dos hospitales con el mismp nombre", "Atencion", JOptionPane.INFORMATION_MESSAGE);
@@ -877,6 +889,7 @@ public class Principal extends javax.swing.JFrame {
         int edad;
         String id;
         String ranking;
+        int num;
         Hospital temporal = new Hospital();
 
         nombre = this.tf_nombreParamedico.getText();
@@ -885,8 +898,21 @@ public class Principal extends javax.swing.JFrame {
         ranking = this.cb_rankingParamedico.getSelectedItem().toString();
         temporal = (Hospital) this.cb_complejoParamedico.getSelectedItem();
 
+        num = getRanking(ranking);
+        Emergencia emergencia = Emergencia.A;
+        
+        if(num == 4){
+            emergencia = Emergencia.A;
+        }else if(num == 3){
+            emergencia = Emergencia.B;
+        }else if(num == 2){
+            emergencia = Emergencia.C;
+        }else if(num == 1){
+            emergencia = Emergencia.D;
+        }
+        
         if (temporal.getParamedicos().size() < temporal.getMaxParamedicos()) {
-            paramedicos.add(new Paramedico(nombre, edad, id, getRanking(ranking), temporal));
+            paramedicos.add(new Paramedico(nombre, edad, id, emergencia, temporal));
             temporal.addParamedico(paramedicos.get(paramedicos.size() - 1));
             JOptionPane.showMessageDialog(this, "Paramedico creado con exito", "Atencion", JOptionPane.INFORMATION_MESSAGE);
         } else {
@@ -1120,6 +1146,7 @@ public class Principal extends javax.swing.JFrame {
     }
 
     public int getRanking(String letra) {
+        
         if (letra == "A") {
             return 4;
         } else if (letra == "B") {

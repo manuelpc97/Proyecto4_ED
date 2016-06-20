@@ -1,5 +1,6 @@
 
 import java.util.ArrayList;
+import java.util.PriorityQueue;
 
 
 /*
@@ -15,14 +16,14 @@ public class Hospital extends Ubicacion {
 
     int maxParamedicos;
     int maxAmbulancias;
-    int ranking;
+    Emergencia ranking;
     ArrayList<Ambulancia> ambulancias = new ArrayList();
-    ArrayList<Paramedico> paramedicos = new ArrayList();
+    PriorityQueue<Paramedico> paramedicos = new PriorityQueue(maxParamedicos);
 
     public Hospital() {
     }
 
-    public Hospital(int maxParamedicos, int maxAmbulancias, int ranking, String nombre, String direccion) {
+    public Hospital(int maxParamedicos, int maxAmbulancias, Emergencia ranking, String nombre, String direccion) {
         super(nombre, direccion);
         this.maxParamedicos = maxParamedicos;
         this.maxAmbulancias = maxAmbulancias;
@@ -46,11 +47,11 @@ public class Hospital extends Ubicacion {
         this.maxAmbulancias = maxAmbulancias;
     }
 
-    public int getRanking() {
+    public Emergencia getRanking() {
         return ranking;
     }
 
-    public void setRanking(int ranking) {
+    public void setRanking(Emergencia ranking) {
         this.ranking = ranking;
     }
 
@@ -58,7 +59,7 @@ public class Hospital extends Ubicacion {
         return ambulancias;
     }
 
-    public ArrayList<Paramedico> getParamedicos() {
+    public PriorityQueue<Paramedico> getParamedicos() {
         return paramedicos;
     }
 

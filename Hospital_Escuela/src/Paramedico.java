@@ -8,17 +8,17 @@
  *
  * @author manuel
  */
-public class Paramedico {
+public class Paramedico implements Comparable<Paramedico> {
     String nombre;
     int edad;
     String id;
-    int ranking;
+    Emergencia ranking;
     Hospital complejo;
 
     public Paramedico() {
     }
 
-    public Paramedico(String nombre, int edad, String id, int ranking, Hospital complejo) {
+    public Paramedico(String nombre, int edad, String id, Emergencia ranking, Hospital complejo) {
         this.nombre = nombre;
         this.edad = edad;
         this.id = id;
@@ -50,11 +50,11 @@ public class Paramedico {
         this.id = id;
     }
 
-    public int getRanking() {
+    public Emergencia getRanking() {
         return ranking;
     }
 
-    public void setRanking(int ranking) {
+    public void setRanking(Emergencia ranking) {
         this.ranking = ranking;
     }
 
@@ -69,6 +69,11 @@ public class Paramedico {
     @Override
     public String toString() {
         return nombre;
+    }
+
+    @Override
+    public int compareTo(Paramedico next) {
+       return ranking.compareTo(next.ranking);//To change body of generated methods, choose Tools | Templates.
     }
     
     
