@@ -18,7 +18,7 @@ public class Hospital extends Ubicacion {
     int maxAmbulancias;
     Emergencia ranking;
     ArrayList<Ambulancia> ambulancias = new ArrayList();
-    PriorityQueue<Paramedico> paramedicos = new PriorityQueue(maxParamedicos);
+    PriorityQueue<Paramedico> paramedicos = new PriorityQueue();
 
     public Hospital() {
     }
