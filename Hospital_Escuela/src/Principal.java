@@ -1075,7 +1075,7 @@ public class Principal extends javax.swing.JFrame {
 
     private void bt_crearConexionMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bt_crearConexionMouseClicked
         if(contadorNodos == 2){
-            mapa.addEdge(id+"", ubicacionesTemporales.get(0).getNombre(), ubicacionesTemporales.get(1).getNombre()).addAttribute("value",
+            mapa.addEdge(id+"", ubicacionesTemporales.get(0).getNombre(), ubicacionesTemporales.get(1).getNombre()).addAttribute("length",
                     Double.parseDouble(this.js_km.getValue().toString()));
             mapa.getEdge(id+"").addAttribute("label", Double.parseDouble(this.js_km.getValue().toString()));
             id++;
