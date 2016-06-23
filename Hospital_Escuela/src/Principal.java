@@ -1111,20 +1111,26 @@ public class Principal extends javax.swing.JFrame {
     private void bt_addUbicacionesMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bt_addUbicacionesMouseClicked
         this.jd_menuMapa.setVisible(false);
         listInComboBox(hospitales, this.cb_complejosMapa);
+        DefaultComboBoxModel modelo = new DefaultComboBoxModel();
+        modelo = (DefaultComboBoxModel)this.cb_complejosMapa.getModel();
+        for (int i = 0; i < ubicaciones.size(); i++) {
+            modelo.addElement(ubicaciones.get(i));
+        }
+        this.cb_complejosMapa.setModel(modelo);
         this.showDialog(this.jd_addUbicacion);
     }//GEN-LAST:event_bt_addUbicacionesMouseClicked
 
     private void bt_addToMapMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bt_addToMapMouseClicked
-        hospitalTemporal = (Hospital) this.cb_complejosMapa.getSelectedItem();
+        ubicacionTemporal = (Ubicacion) this.cb_complejosMapa.getSelectedItem();
         boolean seguir = true;
 
         for (Node nodo : mapa.getEachNode()) {
-            if (nodo.getId() == hospitalTemporal.getNombre()) {
+            if (nodo.getId() == ubicacionTemporal.getNombre()) {
                 seguir = false;
             }
         }
         if (seguir) {
-            mapa.addNode(hospitalTemporal.getNombre()).addAttribute("label", hospitalTemporal.getNombre());
+            mapa.addNode(ubicacionTemporal.getNombre()).addAttribute("label", ubicacionTemporal.getNombre());
             JOptionPane.showMessageDialog(this, "Nodo agregado exitosamente");
         } else {
             JOptionPane.showMessageDialog(this, "Este nodo ya ha sido agregado");
@@ -1134,12 +1140,16 @@ public class Principal extends javax.swing.JFrame {
     private void bt_agregarUbiMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bt_agregarUbiMouseClicked
         String nombre;
         String direccion;
-        boolean seguir;
+        boolean seguir = true;
 
         nombre = this.tf_nombreUbicacion.getText();
         direccion = this.tf_DireccionUbicacion.getText();
 
-        seguir = this.verifificarNombre(ubicaciones, nombre);
+        for (Node nodo : mapa.getEachNode()) {
+            if(nodo.getId().equals(nombre)){
+                seguir = false;
+            }
+        }
 
         if (seguir) {
             ubicaciones.add(new Ubicacion(nombre, direccion));
@@ -1185,10 +1195,18 @@ public class Principal extends javax.swing.JFrame {
         this.jd_menuMapa.setVisible(false);
         ArrayList<Object> temporal = new ArrayList();
         for (int i = 0; i < hospitales.size(); i++) {
-            temporal.add(hospitales.get(i));
+            for (Node nodo : mapa.getEachNode()) {
+                if(nodo.getId() == hospitales.get(i).getNombre()){
+                    temporal.add(hospitales.get(i));
+                }
+            }
         }
         for (int i = 0; i < ubicaciones.size(); i++) {
-            temporal.add(ubicaciones.get(i));
+            for (Node nodo : mapa.getEachNode()) {
+                if(nodo.getId() == ubicaciones.get(i).getNombre()){
+                    temporal.add(ubicaciones.get(i));
+                }
+            }
         }
 
         DefaultComboBoxModel modelo = new DefaultComboBoxModel();
@@ -1202,7 +1220,15 @@ public class Principal extends javax.swing.JFrame {
     private void bt_sendEemergencyMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bt_sendEemergencyMouseClicked
         Ubicacion lugar = new Ubicacion();
         Emergencia ranking = Emergencia.D;
-
+        ArrayList<Hospital> temporal = new ArrayList();
+        
+        for (int i = 0; i < hospitales.size(); i++) {
+            for (Node nodo : mapa.getEachNode()) {
+                if(nodo.getId() == hospitales.get(i).getNombre()){
+                    temporal.add(hospitales.get(i));
+                }
+            }
+        }
         if (this.cb_rankEemergencia.getSelectedItem().toString() == "A") {
             ranking = Emergencia.A;
         } else if (this.cb_rankEemergencia.getSelectedItem().toString() == "B") {
@@ -1214,17 +1240,26 @@ public class Principal extends javax.swing.JFrame {
         }
 
         lugar = (Ubicacion) this.cb_lugarEmergencia.getSelectedItem();
-        Caso emergencia = new Caso(ranking, lugar, lugar.getNombre(), mapa, hospitales);
+        Caso emergencia = new Caso(ranking, lugar, lugar.getNombre(), mapa, temporal);
         emergencia.run();
     }//GEN-LAST:event_bt_sendEemergencyMouseClicked
 
     private void bt_emergenciasMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bt_emergenciasMouseClicked
+        if(mapa.getEdgeCount() >= mapa.getNodeCount()-1){
         DefaultComboBoxModel modelo = new DefaultComboBoxModel();
         for (int i = 0; i < this.ubicaciones.size(); i++) {
-            modelo.addElement(ubicaciones.get(i));
+            for (Node nodo : mapa.getEachNode()) {
+                if(nodo.getId() == ubicaciones.get(i).getNombre()){
+                    modelo.addElement(ubicaciones.get(i));
+                }
+            }
+            
         }
         this.cb_lugarEmergencia.setModel(modelo);
         showDialog(this.jd_emergencias);
+        }else{
+            JOptionPane.showMessageDialog(this, "Todos sus nodos deben estar conectados para esta funcion");
+        }
     }//GEN-LAST:event_bt_emergenciasMouseClicked
 
     private void formWindowClosing(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosing
@@ -1482,6 +1517,7 @@ public class Principal extends javax.swing.JFrame {
     ArrayList<Ubicacion> ubicaciones = new ArrayList();
     Hospital hospitalTemporal = new Hospital();
     Paramedico paramedicoTemporal = new Paramedico();
+    Ubicacion ubicacionTemporal = new Ubicacion();
     Ambulancia ambulanciaTemporal = new Ambulancia();
     int contador1 = 0;
     int contador2 = 0;
