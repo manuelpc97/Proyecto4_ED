@@ -1,4 +1,9 @@
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
 import java.util.ArrayList;
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.JComboBox;
@@ -12,6 +17,7 @@ import org.graphstream.algorithm.*;
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+
 /**
  *
  * @author manuel
@@ -23,6 +29,12 @@ public class Principal extends javax.swing.JFrame {
      */
     public Principal() {
         initComponents();
+        listaGeneral = new Listas();
+        hospitales = new ArrayList();
+        ambulancias = new ArrayList();
+        paramedicos = new ArrayList();
+        ubicaciones = new ArrayList();
+        cargar();
         //this.setExtendedState(MAXIMIZED_BOTH);
     }
 
@@ -672,7 +684,7 @@ public class Principal extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(jd_addUbicacionLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jTabbedPane4, javax.swing.GroupLayout.DEFAULT_SIZE, 389, Short.MAX_VALUE)
+                .addComponent(jTabbedPane4)
                 .addContainerGap())
         );
         jd_addUbicacionLayout.setVerticalGroup(
@@ -681,7 +693,7 @@ public class Principal extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(jLabel38)
                 .addGap(28, 28, 28)
-                .addComponent(jTabbedPane4, javax.swing.GroupLayout.DEFAULT_SIZE, 238, Short.MAX_VALUE)
+                .addComponent(jTabbedPane4)
                 .addContainerGap())
         );
 
@@ -818,6 +830,11 @@ public class Principal extends javax.swing.JFrame {
         );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        addWindowListener(new java.awt.event.WindowAdapter() {
+            public void windowClosing(java.awt.event.WindowEvent evt) {
+                formWindowClosing(evt);
+            }
+        });
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel3.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
@@ -900,17 +917,17 @@ public class Principal extends javax.swing.JFrame {
         maxParamedicos = Integer.parseInt(this.js_maxParamedicosHosp.getValue().toString());
         maxAmbulancias = Integer.parseInt(this.js_maxAmbulanciasHosp.getValue().toString());
         ranking = this.cb_rankingHospital.getSelectedItem().toString();
-        
+
         int num = getRanking(ranking);
         Emergencia emergencia = Emergencia.A;
-        
-        if(num == 4){
+
+        if (num == 4) {
             emergencia = Emergencia.A;
-        }else if(num == 3){
+        } else if (num == 3) {
             emergencia = Emergencia.B;
-        }else if(num == 2){
+        } else if (num == 2) {
             emergencia = Emergencia.C;
-        }else if(num == 1){
+        } else if (num == 1) {
             emergencia = Emergencia.D;
         }
         for (int i = 0; i < hospitales.size(); i++) {
@@ -977,17 +994,17 @@ public class Principal extends javax.swing.JFrame {
 
         num = getRanking(ranking);
         Emergencia emergencia = Emergencia.A;
-        
-        if(num == 4){
+
+        if (num == 4) {
             emergencia = Emergencia.A;
-        }else if(num == 3){
+        } else if (num == 3) {
             emergencia = Emergencia.B;
-        }else if(num == 2){
+        } else if (num == 2) {
             emergencia = Emergencia.C;
-        }else if(num == 1){
+        } else if (num == 1) {
             emergencia = Emergencia.D;
         }
-        
+
         if (temporal.getParamedicos().size() < temporal.getMaxParamedicos()) {
             paramedicos.add(new Paramedico(nombre, edad, id, emergencia, temporal));
             temporal.addParamedico(paramedicos.get(paramedicos.size() - 1));
@@ -1151,15 +1168,15 @@ public class Principal extends javax.swing.JFrame {
     }//GEN-LAST:event_bt_seleccionarUbicacionMouseClicked
 
     private void bt_crearConexionMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bt_crearConexionMouseClicked
-        if(contadorNodos == 2){
-            mapa.addEdge(id+"", ubicacionesTemporales.get(0).getNombre(), ubicacionesTemporales.get(1).getNombre()).addAttribute("length",
+        if (contadorNodos == 2) {
+            mapa.addEdge(id + "", ubicacionesTemporales.get(0).getNombre(), ubicacionesTemporales.get(1).getNombre()).addAttribute("length",
                     Double.parseDouble(this.js_km.getValue().toString()));
-            mapa.getEdge(id+"").addAttribute("label", Double.parseDouble(this.js_km.getValue().toString()));
+            mapa.getEdge(id + "").addAttribute("label", Double.parseDouble(this.js_km.getValue().toString()));
             id++;
             contadorNodos = 0;
             ubicacionesTemporales = new ArrayList();
             JOptionPane.showMessageDialog(this, "Conexion creada exitosamente");
-        }else{
+        } else {
             JOptionPane.showMessageDialog(this, "Numero erroneo de nodos para esta operacion, vuelva a selecionar");
         }
     }//GEN-LAST:event_bt_crearConexionMouseClicked
@@ -1173,7 +1190,7 @@ public class Principal extends javax.swing.JFrame {
         for (int i = 0; i < ubicaciones.size(); i++) {
             temporal.add(ubicaciones.get(i));
         }
-        
+
         DefaultComboBoxModel modelo = new DefaultComboBoxModel();
         for (int i = 0; i < temporal.size(); i++) {
             modelo.addElement(temporal.get(i));
@@ -1185,19 +1202,19 @@ public class Principal extends javax.swing.JFrame {
     private void bt_sendEemergencyMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bt_sendEemergencyMouseClicked
         Ubicacion lugar = new Ubicacion();
         Emergencia ranking = Emergencia.D;
-        
-        if(this.cb_rankEemergencia.getSelectedItem().toString() == "A"){
+
+        if (this.cb_rankEemergencia.getSelectedItem().toString() == "A") {
             ranking = Emergencia.A;
-        }else if(this.cb_rankEemergencia.getSelectedItem().toString() == "B"){
+        } else if (this.cb_rankEemergencia.getSelectedItem().toString() == "B") {
             ranking = Emergencia.B;
-        }else if(this.cb_rankEemergencia.getSelectedItem().toString() == "C"){
+        } else if (this.cb_rankEemergencia.getSelectedItem().toString() == "C") {
             ranking = Emergencia.C;
-        }else if(this.cb_rankEemergencia.getSelectedItem().toString() == "D"){
+        } else if (this.cb_rankEemergencia.getSelectedItem().toString() == "D") {
             ranking = Emergencia.D;
         }
-        
-        lugar = (Ubicacion)this.cb_lugarEmergencia.getSelectedItem();
-        Caso emergencia = new Caso(ranking, lugar, lugar.getNombre(),mapa, hospitales);
+
+        lugar = (Ubicacion) this.cb_lugarEmergencia.getSelectedItem();
+        Caso emergencia = new Caso(ranking, lugar, lugar.getNombre(), mapa, hospitales);
         emergencia.run();
     }//GEN-LAST:event_bt_sendEemergencyMouseClicked
 
@@ -1210,6 +1227,10 @@ public class Principal extends javax.swing.JFrame {
         showDialog(this.jd_emergencias);
     }//GEN-LAST:event_bt_emergenciasMouseClicked
 
+    private void formWindowClosing(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosing
+        this.guardar();
+    }//GEN-LAST:event_formWindowClosing
+
     public boolean verifificarNombre(ArrayList<Ubicacion> lista, String nombre) {
         boolean seguir = true;
         for (int i = 0; i < lista.size(); i++) {
@@ -1218,6 +1239,39 @@ public class Principal extends javax.swing.JFrame {
             }
         }
         return seguir;
+    }
+
+    public void cargar() {
+        File archivo = null;
+        try {
+            archivo = new File("./listas.mp");
+            FileInputStream fi = new FileInputStream(archivo);
+            ObjectInputStream oi = new ObjectInputStream(fi);
+            listaGeneral = (Listas) oi.readObject();
+            hospitales = listaGeneral.getHospitales();
+            ambulancias = listaGeneral.getAmbulancias();
+            paramedicos = listaGeneral.getParamedicos();
+            ubicaciones = listaGeneral.getUbicaciones();
+            oi.close();
+            fi.close();
+        } catch (Exception e) {
+        }
+    }
+
+    public void guardar() {
+        this.listaGeneral = new Listas(hospitales, ambulancias, ubicaciones, paramedicos);
+        File archivo = null;
+        try {
+            archivo = new File("./listas.mp");
+            FileOutputStream fo = new FileOutputStream(archivo);
+            ObjectOutputStream oo = new ObjectOutputStream(fo);
+            oo.writeObject(listaGeneral);
+            oo.close();
+            fo.close();
+            JOptionPane.showMessageDialog(this, "Se ha guardado la informacion con exito");
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(this, "Error al guardar");
+        }
     }
 
     public void listInComboBox(ArrayList<Hospital> lista, JComboBox box) {
@@ -1251,7 +1305,7 @@ public class Principal extends javax.swing.JFrame {
     }
 
     public int getRanking(String letra) {
-        
+
         if (letra == "A") {
             return 4;
         } else if (letra == "B") {
@@ -1435,4 +1489,5 @@ public class Principal extends javax.swing.JFrame {
     int contadorNodos = 0;
     ArrayList<Ubicacion> ubicacionesTemporales = new ArrayList();
     int id = 0;
+    Listas listaGeneral = new Listas();
 }

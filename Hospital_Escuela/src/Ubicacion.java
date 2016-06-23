@@ -1,4 +1,5 @@
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
 /*
@@ -11,7 +12,7 @@ import java.util.ArrayList;
  *
  * @author manuel
  */
-public class Ubicacion {
+public class Ubicacion implements Serializable{
     String nombre;
     String direccion;
     
