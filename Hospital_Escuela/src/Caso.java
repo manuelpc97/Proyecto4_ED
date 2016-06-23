@@ -93,7 +93,7 @@ public class Caso extends Thread {
 
     private void esperarXsegundos(int segundos) {
         try {
-            this.sleep(segundos * 8000);
+            this.sleep(segundos * 4000);
         } catch (InterruptedException ex) {
             this.currentThread().interrupt();
         }

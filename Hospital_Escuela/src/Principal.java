@@ -93,6 +93,7 @@ public class Principal extends javax.swing.JFrame {
         cb_complejoParamedico = new javax.swing.JComboBox();
         jLabel23 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
+        jLabel55 = new javax.swing.JLabel();
         jd_eliminacion = new javax.swing.JDialog();
         jLabel22 = new javax.swing.JLabel();
         jTabbedPane2 = new javax.swing.JTabbedPane();
@@ -111,6 +112,7 @@ public class Principal extends javax.swing.JFrame {
         cb_eliminarParamedicos = new javax.swing.JComboBox();
         bt_eliminarParamedicos = new javax.swing.JButton();
         jLabel29 = new javax.swing.JLabel();
+        jLabel56 = new javax.swing.JLabel();
         jd_reasignacion = new javax.swing.JDialog();
         jLabel30 = new javax.swing.JLabel();
         jTabbedPane3 = new javax.swing.JTabbedPane();
@@ -130,39 +132,47 @@ public class Principal extends javax.swing.JFrame {
         bt_seleccionarParamedico = new javax.swing.JButton();
         bt_reasignarParamedico = new javax.swing.JButton();
         jLabel36 = new javax.swing.JLabel();
+        jLabel57 = new javax.swing.JLabel();
         jd_menuMapa = new javax.swing.JDialog();
-        jLabel37 = new javax.swing.JLabel();
         bt_addUbicaciones = new javax.swing.JButton();
         bt_addConexiones = new javax.swing.JButton();
+        jLabel37 = new javax.swing.JLabel();
         bt_dibujar = new javax.swing.JButton();
+        jLabel48 = new javax.swing.JLabel();
         jd_addUbicacion = new javax.swing.JDialog();
-        jLabel38 = new javax.swing.JLabel();
         jTabbedPane4 = new javax.swing.JTabbedPane();
         jPanel9 = new javax.swing.JPanel();
         cb_complejosMapa = new javax.swing.JComboBox();
         jLabel39 = new javax.swing.JLabel();
         bt_addToMap = new javax.swing.JButton();
+        jLabel51 = new javax.swing.JLabel();
         jPanel10 = new javax.swing.JPanel();
         jLabel40 = new javax.swing.JLabel();
-        jLabel41 = new javax.swing.JLabel();
         tf_nombreUbicacion = new javax.swing.JTextField();
         tf_DireccionUbicacion = new javax.swing.JTextField();
         bt_agregarUbi = new javax.swing.JButton();
+        jLabel41 = new javax.swing.JLabel();
+        jLabel52 = new javax.swing.JLabel();
+        jLabel38 = new javax.swing.JLabel();
+        jLabel50 = new javax.swing.JLabel();
+        jLabel49 = new javax.swing.JLabel();
         jd_conexiones = new javax.swing.JDialog();
         jLabel42 = new javax.swing.JLabel();
         cb_ubicacionesConexion = new javax.swing.JComboBox();
-        jLabel43 = new javax.swing.JLabel();
         bt_seleccionarUbicacion = new javax.swing.JButton();
+        jLabel43 = new javax.swing.JLabel();
         jLabel44 = new javax.swing.JLabel();
         js_km = new javax.swing.JSpinner();
         bt_crearConexion = new javax.swing.JButton();
+        jLabel53 = new javax.swing.JLabel();
         jd_emergencias = new javax.swing.JDialog();
-        jLabel45 = new javax.swing.JLabel();
         jLabel46 = new javax.swing.JLabel();
-        jLabel47 = new javax.swing.JLabel();
+        jLabel45 = new javax.swing.JLabel();
         cb_lugarEmergencia = new javax.swing.JComboBox();
-        cb_rankEemergencia = new javax.swing.JComboBox();
+        jLabel47 = new javax.swing.JLabel();
         bt_sendEemergency = new javax.swing.JButton();
+        cb_rankEemergencia = new javax.swing.JComboBox();
+        jLabel54 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         bt_Gestionar = new javax.swing.JButton();
         bt_mapa = new javax.swing.JButton();
@@ -179,7 +189,7 @@ public class Principal extends javax.swing.JFrame {
                 jButton4MouseClicked(evt);
             }
         });
-        jd_gestionRecursos.getContentPane().add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 80, 232, 108));
+        jd_gestionRecursos.getContentPane().add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 80, 232, 108));
 
         jButton5.setBackground(java.awt.Color.gray);
         jButton5.setForeground(new java.awt.Color(155, 11, 11));
@@ -189,7 +199,7 @@ public class Principal extends javax.swing.JFrame {
                 jButton5MouseClicked(evt);
             }
         });
-        jd_gestionRecursos.getContentPane().add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 220, 232, 108));
+        jd_gestionRecursos.getContentPane().add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 220, 232, 108));
 
         jLabel2.setFont(new java.awt.Font("Ubuntu", 1, 18)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(155, 11, 11));
@@ -204,10 +214,10 @@ public class Principal extends javax.swing.JFrame {
                 jButton6MouseClicked(evt);
             }
         });
-        jd_gestionRecursos.getContentPane().add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 360, 232, 108));
+        jd_gestionRecursos.getContentPane().add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 360, 232, 108));
 
-        jLabel4.setIcon(new javax.swing.ImageIcon("/home/manuel/Documentos/estructuraDeDatos/Proyecto4_ED/Hospital_Escuela/Imagenes/símbolo-de-la-medicina-16699269.jpg")); // NOI18N
-        jd_gestionRecursos.getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 830, 590));
+        jLabel4.setIcon(new javax.swing.ImageIcon("/home/manuel/Documentos/estructuraDeDatos/Proyecto4_ED/Hospital_Escuela/Imagenes/54e6d48f7a9fe4ec3dbeabfa7e230a74.jpg")); // NOI18N
+        jd_gestionRecursos.getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 730, 550));
 
         jd_creacion.setBackground(java.awt.Color.darkGray);
         jd_creacion.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -260,7 +270,7 @@ public class Principal extends javax.swing.JFrame {
         jPanel1.add(bt_crearHospital, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 330, 109, 64));
         jPanel1.add(js_maxAmbulanciasHosp, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 220, -1, -1));
 
-        jLabel11.setIcon(new javax.swing.ImageIcon("/home/manuel/Documentos/estructuraDeDatos/Proyecto4_ED/Hospital_Escuela/Imagenes/570472_640px.jpg")); // NOI18N
+        jLabel11.setIcon(new javax.swing.ImageIcon("/home/manuel/Documentos/estructuraDeDatos/Proyecto4_ED/Hospital_Escuela/Imagenes/water-cityscapes-architecture-buildings-grayscale-monochrome-lakes-high-quality-background-79484.jpg")); // NOI18N
         jPanel1.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 640, 430));
 
         jTabbedPane1.addTab("Complejos Hospitalarios", jPanel1);
@@ -300,8 +310,8 @@ public class Principal extends javax.swing.JFrame {
         });
         jPanel2.add(bt_crearAmbulancia, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 360, -1, -1));
 
-        jLabel16.setIcon(new javax.swing.ImageIcon("/home/manuel/Documentos/estructuraDeDatos/Proyecto4_ED/Hospital_Escuela/Imagenes/Ambulancia-MB-Sprinter.jpg")); // NOI18N
-        jPanel2.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 620, 430));
+        jLabel16.setIcon(new javax.swing.ImageIcon("/home/manuel/Documentos/estructuraDeDatos/Proyecto4_ED/Hospital_Escuela/Imagenes/image.php.png")); // NOI18N
+        jPanel2.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 640, 430));
 
         jTabbedPane1.addTab("Ambulancias", jPanel2);
 
@@ -348,7 +358,7 @@ public class Principal extends javax.swing.JFrame {
 
         jPanel3.add(cb_complejoParamedico, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 260, 120, -1));
 
-        jLabel23.setIcon(new javax.swing.ImageIcon("/home/manuel/Documentos/estructuraDeDatos/Proyecto4_ED/Hospital_Escuela/Imagenes/paramedicos-ISSAG-ATSA.jpg")); // NOI18N
+        jLabel23.setIcon(new javax.swing.ImageIcon("/home/manuel/Documentos/estructuraDeDatos/Proyecto4_ED/Hospital_Escuela/Imagenes/image.php.png")); // NOI18N
         jPanel3.add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 640, 440));
 
         jTabbedPane1.addTab("Paramedicos", jPanel3);
@@ -359,6 +369,9 @@ public class Principal extends javax.swing.JFrame {
         jLabel5.setForeground(new java.awt.Color(155, 11, 11));
         jLabel5.setText("Creacion de Recursos");
         jd_creacion.getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(217, 26, 222, -1));
+
+        jLabel55.setIcon(new javax.swing.ImageIcon("/home/manuel/Documentos/estructuraDeDatos/Proyecto4_ED/Hospital_Escuela/Imagenes/dark_triangles_by_pixelperf3ct-d6tpizs.png")); // NOI18N
+        jd_creacion.getContentPane().add(jLabel55, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 660, 510));
 
         jd_eliminacion.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -390,7 +403,7 @@ public class Principal extends javax.swing.JFrame {
         });
         jPanel4.add(bt_eliminarComplejos, new org.netbeans.lib.awtextra.AbsoluteConstraints(244, 109, -1, -1));
 
-        jLabel25.setIcon(new javax.swing.ImageIcon("/home/manuel/Documentos/estructuraDeDatos/Proyecto4_ED/Hospital_Escuela/Imagenes/570472_640px.jpg")); // NOI18N
+        jLabel25.setIcon(new javax.swing.ImageIcon("/home/manuel/Documentos/estructuraDeDatos/Proyecto4_ED/Hospital_Escuela/Imagenes/water-cityscapes-architecture-buildings-grayscale-monochrome-lakes-high-quality-background-79484.jpg")); // NOI18N
         jPanel4.add(jLabel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 500, 350));
 
         jTabbedPane2.addTab("Complejos Hospitalarios", jPanel4);
@@ -412,7 +425,7 @@ public class Principal extends javax.swing.JFrame {
         });
         jPanel5.add(bt_eliminarAmbulacnias, new org.netbeans.lib.awtextra.AbsoluteConstraints(305, 116, 101, -1));
 
-        jLabel27.setIcon(new javax.swing.ImageIcon("/home/manuel/Documentos/estructuraDeDatos/Proyecto4_ED/Hospital_Escuela/Imagenes/Ambulancia-MB-Sprinter.jpg")); // NOI18N
+        jLabel27.setIcon(new javax.swing.ImageIcon("/home/manuel/Documentos/estructuraDeDatos/Proyecto4_ED/Hospital_Escuela/Imagenes/image.php.png")); // NOI18N
         jPanel5.add(jLabel27, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 500, 350));
 
         jTabbedPane2.addTab("Ambulancias", jPanel5);
@@ -434,12 +447,15 @@ public class Principal extends javax.swing.JFrame {
         });
         jPanel6.add(bt_eliminarParamedicos, new org.netbeans.lib.awtextra.AbsoluteConstraints(289, 119, -1, -1));
 
-        jLabel29.setIcon(new javax.swing.ImageIcon("/home/manuel/Documentos/estructuraDeDatos/Proyecto4_ED/Hospital_Escuela/Imagenes/paramedicos-ISSAG-ATSA.jpg")); // NOI18N
+        jLabel29.setIcon(new javax.swing.ImageIcon("/home/manuel/Documentos/estructuraDeDatos/Proyecto4_ED/Hospital_Escuela/Imagenes/image.php.png")); // NOI18N
         jPanel6.add(jLabel29, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 500, 350));
 
         jTabbedPane2.addTab("Paramedicos", jPanel6);
 
         jd_eliminacion.getContentPane().add(jTabbedPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 39, -1, -1));
+
+        jLabel56.setIcon(new javax.swing.ImageIcon("/home/manuel/Documentos/estructuraDeDatos/Proyecto4_ED/Hospital_Escuela/Imagenes/dark_triangles_by_pixelperf3ct-d6tpizs.png")); // NOI18N
+        jd_eliminacion.getContentPane().add(jLabel56, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 510, 370));
 
         jd_reasignacion.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -486,7 +502,7 @@ public class Principal extends javax.swing.JFrame {
         });
         jPanel7.add(bt_reasignarAmbulancia, new org.netbeans.lib.awtextra.AbsoluteConstraints(395, 125, -1, -1));
 
-        jLabel33.setIcon(new javax.swing.ImageIcon("/home/manuel/Documentos/estructuraDeDatos/Proyecto4_ED/Hospital_Escuela/Imagenes/Ambulancia-MB-Sprinter.jpg")); // NOI18N
+        jLabel33.setIcon(new javax.swing.ImageIcon("/home/manuel/Documentos/estructuraDeDatos/Proyecto4_ED/Hospital_Escuela/Imagenes/image.php.png")); // NOI18N
         jPanel7.add(jLabel33, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 520, 250));
 
         jTabbedPane3.addTab("Ambulancias", jPanel7);
@@ -524,15 +540,17 @@ public class Principal extends javax.swing.JFrame {
         });
         jPanel8.add(bt_reasignarParamedico, new org.netbeans.lib.awtextra.AbsoluteConstraints(378, 137, -1, -1));
 
-        jLabel36.setIcon(new javax.swing.ImageIcon("/home/manuel/Documentos/estructuraDeDatos/Proyecto4_ED/Hospital_Escuela/Imagenes/paramedicos-ISSAG-ATSA.jpg")); // NOI18N
+        jLabel36.setIcon(new javax.swing.ImageIcon("/home/manuel/Documentos/estructuraDeDatos/Proyecto4_ED/Hospital_Escuela/Imagenes/image.php.png")); // NOI18N
         jPanel8.add(jLabel36, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 520, 250));
 
         jTabbedPane3.addTab("Paramedicos", jPanel8);
 
-        jd_reasignacion.getContentPane().add(jTabbedPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 50, 529, -1));
+        jd_reasignacion.getContentPane().add(jTabbedPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 40, 529, -1));
 
-        jLabel37.setFont(new java.awt.Font("Ubuntu", 1, 18)); // NOI18N
-        jLabel37.setText("Menu");
+        jLabel57.setIcon(new javax.swing.ImageIcon("/home/manuel/Documentos/estructuraDeDatos/Proyecto4_ED/Hospital_Escuela/Imagenes/dark_triangles_by_pixelperf3ct-d6tpizs.png")); // NOI18N
+        jd_reasignacion.getContentPane().add(jLabel57, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 530, 300));
+
+        jd_menuMapa.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         bt_addUbicaciones.setText("Agregar Ubicaciones");
         bt_addUbicaciones.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -540,6 +558,7 @@ public class Principal extends javax.swing.JFrame {
                 bt_addUbicacionesMouseClicked(evt);
             }
         });
+        jd_menuMapa.getContentPane().add(bt_addUbicaciones, new org.netbeans.lib.awtextra.AbsoluteConstraints(97, 51, 199, 51));
 
         bt_addConexiones.setText("Agregar Conexiones");
         bt_addConexiones.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -547,6 +566,12 @@ public class Principal extends javax.swing.JFrame {
                 bt_addConexionesMouseClicked(evt);
             }
         });
+        jd_menuMapa.getContentPane().add(bt_addConexiones, new org.netbeans.lib.awtextra.AbsoluteConstraints(97, 114, 199, 51));
+
+        jLabel37.setFont(new java.awt.Font("Ubuntu", 1, 18)); // NOI18N
+        jLabel37.setForeground(new java.awt.Color(155, 11, 11));
+        jLabel37.setText("Menu");
+        jd_menuMapa.getContentPane().add(jLabel37, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 12, -1, -1));
 
         bt_dibujar.setText("Mostrar Mapa");
         bt_dibujar.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -554,43 +579,21 @@ public class Principal extends javax.swing.JFrame {
                 bt_dibujarMouseClicked(evt);
             }
         });
+        jd_menuMapa.getContentPane().add(bt_dibujar, new org.netbeans.lib.awtextra.AbsoluteConstraints(97, 183, 199, 42));
 
-        javax.swing.GroupLayout jd_menuMapaLayout = new javax.swing.GroupLayout(jd_menuMapa.getContentPane());
-        jd_menuMapa.getContentPane().setLayout(jd_menuMapaLayout);
-        jd_menuMapaLayout.setHorizontalGroup(
-            jd_menuMapaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jd_menuMapaLayout.createSequentialGroup()
-                .addGroup(jd_menuMapaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(jd_menuMapaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(jd_menuMapaLayout.createSequentialGroup()
-                            .addGap(160, 160, 160)
-                            .addComponent(jLabel37))
-                        .addGroup(jd_menuMapaLayout.createSequentialGroup()
-                            .addGap(97, 97, 97)
-                            .addComponent(bt_addUbicaciones, javax.swing.GroupLayout.PREFERRED_SIZE, 199, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(jd_menuMapaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(bt_dibujar, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(bt_addConexiones, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 199, Short.MAX_VALUE)))
-                .addContainerGap(104, Short.MAX_VALUE))
-        );
-        jd_menuMapaLayout.setVerticalGroup(
-            jd_menuMapaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jd_menuMapaLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel37)
-                .addGap(18, 18, 18)
-                .addComponent(bt_addUbicaciones, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(bt_addConexiones, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(bt_dibujar, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(75, Short.MAX_VALUE))
-        );
+        jLabel48.setIcon(new javax.swing.ImageIcon("/home/manuel/Documentos/estructuraDeDatos/Proyecto4_ED/Hospital_Escuela/Imagenes/44-6600055.jpg")); // NOI18N
+        jd_menuMapa.getContentPane().add(jLabel48, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 400, 300));
 
-        jLabel38.setFont(new java.awt.Font("Ubuntu", 1, 18)); // NOI18N
-        jLabel38.setText("Ubicaciones");
+        jd_addUbicacion.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jPanel9.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanel9.add(cb_complejosMapa, new org.netbeans.lib.awtextra.AbsoluteConstraints(71, 63, 123, -1));
+
+        jLabel39.setFont(new java.awt.Font("Ubuntu", 1, 18)); // NOI18N
+        jLabel39.setForeground(new java.awt.Color(155, 11, 11));
         jLabel39.setText("Complejos Hospitalarios");
+        jPanel9.add(jLabel39, new org.netbeans.lib.awtextra.AbsoluteConstraints(59, 33, -1, -1));
 
         bt_addToMap.setText("Agregar");
         bt_addToMap.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -598,39 +601,21 @@ public class Principal extends javax.swing.JFrame {
                 bt_addToMapMouseClicked(evt);
             }
         });
+        jPanel9.add(bt_addToMap, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 60, 144, -1));
 
-        javax.swing.GroupLayout jPanel9Layout = new javax.swing.GroupLayout(jPanel9);
-        jPanel9.setLayout(jPanel9Layout);
-        jPanel9Layout.setHorizontalGroup(
-            jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel9Layout.createSequentialGroup()
-                .addGap(59, 59, 59)
-                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel9Layout.createSequentialGroup()
-                        .addGap(12, 12, 12)
-                        .addComponent(cb_complejosMapa, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(31, 31, 31)
-                        .addComponent(bt_addToMap, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jLabel39))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        jPanel9Layout.setVerticalGroup(
-            jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel9Layout.createSequentialGroup()
-                .addGap(33, 33, 33)
-                .addComponent(jLabel39)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(cb_complejosMapa, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(bt_addToMap))
-                .addContainerGap(110, Short.MAX_VALUE))
-        );
+        jLabel51.setIcon(new javax.swing.ImageIcon("/home/manuel/Documentos/estructuraDeDatos/Proyecto4_ED/Hospital_Escuela/Imagenes/dark_triangles_by_pixelperf3ct-d6tpizs.png")); // NOI18N
+        jPanel9.add(jLabel51, new org.netbeans.lib.awtextra.AbsoluteConstraints(-3, 0, 370, 190));
 
         jTabbedPane4.addTab("Complejos Hospitalarios", jPanel9);
 
-        jLabel40.setText("Nombre ");
+        jPanel10.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel41.setText("Direccion");
+        jLabel40.setFont(new java.awt.Font("Ubuntu", 1, 18)); // NOI18N
+        jLabel40.setForeground(new java.awt.Color(155, 11, 11));
+        jLabel40.setText("Nombre ");
+        jPanel10.add(jLabel40, new org.netbeans.lib.awtextra.AbsoluteConstraints(59, 38, -1, -1));
+        jPanel10.add(tf_nombreUbicacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(175, 28, 159, -1));
+        jPanel10.add(tf_DireccionUbicacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(175, 96, 159, -1));
 
         bt_agregarUbi.setText("Agregar");
         bt_agregarUbi.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -638,69 +623,39 @@ public class Principal extends javax.swing.JFrame {
                 bt_agregarUbiMouseClicked(evt);
             }
         });
+        jPanel10.add(bt_agregarUbi, new org.netbeans.lib.awtextra.AbsoluteConstraints(175, 160, -1, -1));
 
-        javax.swing.GroupLayout jPanel10Layout = new javax.swing.GroupLayout(jPanel10);
-        jPanel10.setLayout(jPanel10Layout);
-        jPanel10Layout.setHorizontalGroup(
-            jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel10Layout.createSequentialGroup()
-                .addGap(59, 59, 59)
-                .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel40)
-                    .addComponent(jLabel41))
-                .addGap(50, 50, 50)
-                .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(bt_agregarUbi)
-                    .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(tf_DireccionUbicacion)
-                        .addComponent(tf_nombreUbicacion, javax.swing.GroupLayout.DEFAULT_SIZE, 159, Short.MAX_VALUE)))
-                .addContainerGap(47, Short.MAX_VALUE))
-        );
-        jPanel10Layout.setVerticalGroup(
-            jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel10Layout.createSequentialGroup()
-                .addGap(28, 28, 28)
-                .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel40)
-                    .addComponent(tf_nombreUbicacion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(41, 41, 41)
-                .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel41)
-                    .addComponent(tf_DireccionUbicacion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(37, 37, 37)
-                .addComponent(bt_agregarUbi)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
+        jLabel41.setFont(new java.awt.Font("Ubuntu", 1, 18)); // NOI18N
+        jLabel41.setForeground(new java.awt.Color(155, 11, 11));
+        jLabel41.setText("Direccion");
+        jPanel10.add(jLabel41, new org.netbeans.lib.awtextra.AbsoluteConstraints(59, 101, -1, -1));
+
+        jLabel52.setIcon(new javax.swing.ImageIcon("/home/manuel/Documentos/estructuraDeDatos/Proyecto4_ED/Hospital_Escuela/Imagenes/dark_triangles_by_pixelperf3ct-d6tpizs.png")); // NOI18N
+        jPanel10.add(jLabel52, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 370, 190));
 
         jTabbedPane4.addTab("Ubicaciones Normales", jPanel10);
 
-        javax.swing.GroupLayout jd_addUbicacionLayout = new javax.swing.GroupLayout(jd_addUbicacion.getContentPane());
-        jd_addUbicacion.getContentPane().setLayout(jd_addUbicacionLayout);
-        jd_addUbicacionLayout.setHorizontalGroup(
-            jd_addUbicacionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jd_addUbicacionLayout.createSequentialGroup()
-                .addGap(174, 174, 174)
-                .addComponent(jLabel38)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(jd_addUbicacionLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jTabbedPane4)
-                .addContainerGap())
-        );
-        jd_addUbicacionLayout.setVerticalGroup(
-            jd_addUbicacionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jd_addUbicacionLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel38)
-                .addGap(28, 28, 28)
-                .addComponent(jTabbedPane4)
-                .addContainerGap())
-        );
+        jd_addUbicacion.getContentPane().add(jTabbedPane4, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 70, -1, -1));
 
+        jLabel38.setFont(new java.awt.Font("Ubuntu", 1, 18)); // NOI18N
+        jLabel38.setForeground(new java.awt.Color(155, 11, 11));
+        jLabel38.setText("Ubicaciones");
+        jd_addUbicacion.getContentPane().add(jLabel38, new org.netbeans.lib.awtextra.AbsoluteConstraints(174, 21, -1, -1));
+
+        jLabel50.setIcon(new javax.swing.ImageIcon("/home/manuel/Documentos/estructuraDeDatos/Proyecto4_ED/Hospital_Escuela/Imagenes/dark_triangles_by_pixelperf3ct-d6tpizs.png")); // NOI18N
+        jd_addUbicacion.getContentPane().add(jLabel50, new org.netbeans.lib.awtextra.AbsoluteConstraints(-3, -5, 430, 320));
+
+        jLabel49.setText("jLabel49");
+        jd_addUbicacion.getContentPane().add(jLabel49, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 130, -1, 40));
+
+        jd_conexiones.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel42.setFont(new java.awt.Font("Ubuntu", 1, 15)); // NOI18N
+        jLabel42.setForeground(new java.awt.Color(155, 11, 11));
         jLabel42.setText("Ubicaciones");
+        jd_conexiones.getContentPane().add(jLabel42, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 69, -1, -1));
 
-        jLabel43.setFont(new java.awt.Font("Ubuntu", 1, 18)); // NOI18N
-        jLabel43.setText("Conexiones");
+        jd_conexiones.getContentPane().add(cb_ubicacionesConexion, new org.netbeans.lib.awtextra.AbsoluteConstraints(52, 99, 112, -1));
 
         bt_seleccionarUbicacion.setText("Seleccionar");
         bt_seleccionarUbicacion.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -708,8 +663,18 @@ public class Principal extends javax.swing.JFrame {
                 bt_seleccionarUbicacionMouseClicked(evt);
             }
         });
+        jd_conexiones.getContentPane().add(bt_seleccionarUbicacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(252, 98, 97, -1));
 
+        jLabel43.setFont(new java.awt.Font("Ubuntu", 1, 18)); // NOI18N
+        jLabel43.setForeground(new java.awt.Color(155, 11, 11));
+        jLabel43.setText("Conexiones");
+        jd_conexiones.getContentPane().add(jLabel43, new org.netbeans.lib.awtextra.AbsoluteConstraints(129, 12, -1, -1));
+
+        jLabel44.setFont(new java.awt.Font("Ubuntu", 1, 15)); // NOI18N
+        jLabel44.setForeground(new java.awt.Color(155, 11, 11));
         jLabel44.setText("Distancia (km)");
+        jd_conexiones.getContentPane().add(jLabel44, new org.netbeans.lib.awtextra.AbsoluteConstraints(44, 199, -1, -1));
+        jd_conexiones.getContentPane().add(js_km, new org.netbeans.lib.awtextra.AbsoluteConstraints(192, 194, -1, -1));
 
         bt_crearConexion.setText("Crear");
         bt_crearConexion.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -717,61 +682,29 @@ public class Principal extends javax.swing.JFrame {
                 bt_crearConexionMouseClicked(evt);
             }
         });
+        jd_conexiones.getContentPane().add(bt_crearConexion, new org.netbeans.lib.awtextra.AbsoluteConstraints(253, 193, 96, -1));
 
-        javax.swing.GroupLayout jd_conexionesLayout = new javax.swing.GroupLayout(jd_conexiones.getContentPane());
-        jd_conexiones.getContentPane().setLayout(jd_conexionesLayout);
-        jd_conexionesLayout.setHorizontalGroup(
-            jd_conexionesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jd_conexionesLayout.createSequentialGroup()
-                .addGroup(jd_conexionesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jd_conexionesLayout.createSequentialGroup()
-                        .addGap(60, 60, 60)
-                        .addComponent(jLabel42))
-                    .addGroup(jd_conexionesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jd_conexionesLayout.createSequentialGroup()
-                            .addGap(52, 52, 52)
-                            .addComponent(cb_ubicacionesConexion, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(88, 88, 88)
-                            .addComponent(bt_seleccionarUbicacion, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jd_conexionesLayout.createSequentialGroup()
-                            .addGap(44, 44, 44)
-                            .addGroup(jd_conexionesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(jLabel43)
-                                .addGroup(jd_conexionesLayout.createSequentialGroup()
-                                    .addComponent(jLabel44)
-                                    .addGap(51, 51, 51)
-                                    .addComponent(js_km, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(bt_crearConexion, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(51, Short.MAX_VALUE))
-        );
-        jd_conexionesLayout.setVerticalGroup(
-            jd_conexionesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jd_conexionesLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel43)
-                .addGap(36, 36, 36)
-                .addComponent(jLabel42)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jd_conexionesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(cb_ubicacionesConexion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(bt_seleccionarUbicacion))
-                .addGap(66, 66, 66)
-                .addGroup(jd_conexionesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel44)
-                    .addComponent(js_km, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(bt_crearConexion))
-                .addContainerGap(78, Short.MAX_VALUE))
-        );
+        jLabel53.setIcon(new javax.swing.ImageIcon("/home/manuel/Documentos/estructuraDeDatos/Proyecto4_ED/Hospital_Escuela/Imagenes/dark_triangles_by_pixelperf3ct-d6tpizs.png")); // NOI18N
+        jd_conexiones.getContentPane().add(jLabel53, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 400, 300));
+
+        jd_emergencias.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel46.setFont(new java.awt.Font("Ubuntu", 1, 15)); // NOI18N
+        jLabel46.setForeground(new java.awt.Color(155, 11, 11));
+        jLabel46.setText("Lugar Proveniente");
+        jd_emergencias.getContentPane().add(jLabel46, new org.netbeans.lib.awtextra.AbsoluteConstraints(95, 83, -1, -1));
 
         jLabel45.setFont(new java.awt.Font("Ubuntu", 1, 18)); // NOI18N
+        jLabel45.setForeground(new java.awt.Color(155, 11, 11));
         jLabel45.setText("Emergencias");
+        jd_emergencias.getContentPane().add(jLabel45, new org.netbeans.lib.awtextra.AbsoluteConstraints(221, 28, -1, -1));
 
-        jLabel46.setText("Lugar Proveniente");
+        jd_emergencias.getContentPane().add(cb_lugarEmergencia, new org.netbeans.lib.awtextra.AbsoluteConstraints(95, 127, 134, -1));
 
+        jLabel47.setFont(new java.awt.Font("Ubuntu", 1, 15)); // NOI18N
+        jLabel47.setForeground(new java.awt.Color(155, 11, 11));
         jLabel47.setText("Grado de emergencia");
-
-        cb_rankEemergencia.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "A", "B", "C", "D" }));
+        jd_emergencias.getContentPane().add(jLabel47, new org.netbeans.lib.awtextra.AbsoluteConstraints(328, 83, -1, -1));
 
         bt_sendEemergency.setText("Enviar emergencia");
         bt_sendEemergency.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -779,55 +712,13 @@ public class Principal extends javax.swing.JFrame {
                 bt_sendEemergencyMouseClicked(evt);
             }
         });
+        jd_emergencias.getContentPane().add(bt_sendEemergency, new org.netbeans.lib.awtextra.AbsoluteConstraints(235, 202, -1, -1));
 
-        javax.swing.GroupLayout jd_emergenciasLayout = new javax.swing.GroupLayout(jd_emergencias.getContentPane());
-        jd_emergencias.getContentPane().setLayout(jd_emergenciasLayout);
-        jd_emergenciasLayout.setHorizontalGroup(
-            jd_emergenciasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jd_emergenciasLayout.createSequentialGroup()
-                .addGroup(jd_emergenciasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jd_emergenciasLayout.createSequentialGroup()
-                        .addGap(221, 221, 221)
-                        .addComponent(jLabel45))
-                    .addGroup(jd_emergenciasLayout.createSequentialGroup()
-                        .addGap(95, 95, 95)
-                        .addGroup(jd_emergenciasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(cb_lugarEmergencia, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel46, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addGroup(jd_emergenciasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jd_emergenciasLayout.createSequentialGroup()
-                                .addGap(99, 99, 99)
-                                .addComponent(jLabel47))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jd_emergenciasLayout.createSequentialGroup()
-                                .addGap(158, 158, 158)
-                                .addComponent(cb_rankEemergencia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(42, 42, 42)))))
-                .addContainerGap(101, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jd_emergenciasLayout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(bt_sendEemergency)
-                .addGap(197, 197, 197))
-        );
-        jd_emergenciasLayout.setVerticalGroup(
-            jd_emergenciasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jd_emergenciasLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel45)
-                .addGap(34, 34, 34)
-                .addGroup(jd_emergenciasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel46)
-                    .addComponent(jLabel47))
-                .addGroup(jd_emergenciasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jd_emergenciasLayout.createSequentialGroup()
-                        .addGap(18, 18, 18)
-                        .addComponent(cb_rankEemergencia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jd_emergenciasLayout.createSequentialGroup()
-                        .addGap(26, 26, 26)
-                        .addComponent(cb_lugarEmergencia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 65, Short.MAX_VALUE)
-                .addComponent(bt_sendEemergency)
-                .addGap(69, 69, 69))
-        );
+        cb_rankEemergencia.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "A", "B", "C", "D" }));
+        jd_emergencias.getContentPane().add(cb_rankEemergencia, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 119, -1, -1));
+
+        jLabel54.setIcon(new javax.swing.ImageIcon("/home/manuel/Documentos/estructuraDeDatos/Proyecto4_ED/Hospital_Escuela/Imagenes/dark_triangles_by_pixelperf3ct-d6tpizs.png")); // NOI18N
+        jd_emergencias.getContentPane().add(jLabel54, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 570, 300));
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         addWindowListener(new java.awt.event.WindowAdapter() {
@@ -850,7 +741,7 @@ public class Principal extends javax.swing.JFrame {
                 bt_GestionarMouseClicked(evt);
             }
         });
-        getContentPane().add(bt_Gestionar, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 120, 240, 110));
+        getContentPane().add(bt_Gestionar, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 50, 240, 110));
 
         bt_mapa.setBackground(java.awt.Color.gray);
         bt_mapa.setForeground(new java.awt.Color(155, 11, 11));
@@ -860,7 +751,7 @@ public class Principal extends javax.swing.JFrame {
                 bt_mapaMouseClicked(evt);
             }
         });
-        getContentPane().add(bt_mapa, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 260, 240, 110));
+        getContentPane().add(bt_mapa, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 180, 240, 110));
 
         bt_emergencias.setBackground(java.awt.Color.gray);
         bt_emergencias.setForeground(new java.awt.Color(155, 11, 11));
@@ -870,10 +761,10 @@ public class Principal extends javax.swing.JFrame {
                 bt_emergenciasMouseClicked(evt);
             }
         });
-        getContentPane().add(bt_emergencias, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 400, 240, 110));
+        getContentPane().add(bt_emergencias, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 310, 240, 110));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon("/home/manuel/Documentos/estructuraDeDatos/Proyecto4_ED/Hospital_Escuela/Imagenes/símbolo-de-la-medicina-16699269.jpg")); // NOI18N
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 820, 590));
+        jLabel1.setIcon(new javax.swing.ImageIcon("/home/manuel/Documentos/estructuraDeDatos/Proyecto4_ED/Hospital_Escuela/Imagenes/dark_triangles_by_pixelperf3ct-d6tpizs.png")); // NOI18N
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -40, 750, 500));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -1021,6 +912,11 @@ public class Principal extends javax.swing.JFrame {
     private void bt_eliminarComplejosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bt_eliminarComplejosMouseClicked
         hospitalTemporal = (Hospital) this.cb_eliminarComplejos.getSelectedItem();
         hospitales.remove(hospitalTemporal);
+        for (Node nodo : mapa.getEachNode()) {
+            if (hospitalTemporal.getNombre().equals(nodo.getId())) {
+                mapa.removeNode(hospitalTemporal.getNombre());
+            }
+        }
         listInComboBox(hospitales, this.cb_eliminarComplejos);
         JOptionPane.showMessageDialog(this, "Hospital eliminado con exito", "Atencion", JOptionPane.INFORMATION_MESSAGE);
     }//GEN-LAST:event_bt_eliminarComplejosMouseClicked
@@ -1112,7 +1008,7 @@ public class Principal extends javax.swing.JFrame {
         this.jd_menuMapa.setVisible(false);
         listInComboBox(hospitales, this.cb_complejosMapa);
         DefaultComboBoxModel modelo = new DefaultComboBoxModel();
-        modelo = (DefaultComboBoxModel)this.cb_complejosMapa.getModel();
+        modelo = (DefaultComboBoxModel) this.cb_complejosMapa.getModel();
         for (int i = 0; i < ubicaciones.size(); i++) {
             modelo.addElement(ubicaciones.get(i));
         }
@@ -1146,7 +1042,7 @@ public class Principal extends javax.swing.JFrame {
         direccion = this.tf_DireccionUbicacion.getText();
 
         for (Node nodo : mapa.getEachNode()) {
-            if(nodo.getId().equals(nombre)){
+            if (nodo.getId().equals(nombre)) {
                 seguir = false;
             }
         }
@@ -1196,14 +1092,14 @@ public class Principal extends javax.swing.JFrame {
         ArrayList<Object> temporal = new ArrayList();
         for (int i = 0; i < hospitales.size(); i++) {
             for (Node nodo : mapa.getEachNode()) {
-                if(nodo.getId() == hospitales.get(i).getNombre()){
+                if (nodo.getId() == hospitales.get(i).getNombre()) {
                     temporal.add(hospitales.get(i));
                 }
             }
         }
         for (int i = 0; i < ubicaciones.size(); i++) {
             for (Node nodo : mapa.getEachNode()) {
-                if(nodo.getId() == ubicaciones.get(i).getNombre()){
+                if (nodo.getId() == ubicaciones.get(i).getNombre()) {
                     temporal.add(ubicaciones.get(i));
                 }
             }
@@ -1221,10 +1117,10 @@ public class Principal extends javax.swing.JFrame {
         Ubicacion lugar = new Ubicacion();
         Emergencia ranking = Emergencia.D;
         ArrayList<Hospital> temporal = new ArrayList();
-        
+
         for (int i = 0; i < hospitales.size(); i++) {
             for (Node nodo : mapa.getEachNode()) {
-                if(nodo.getId() == hospitales.get(i).getNombre()){
+                if (nodo.getId() == hospitales.get(i).getNombre()) {
                     temporal.add(hospitales.get(i));
                 }
             }
@@ -1241,23 +1137,23 @@ public class Principal extends javax.swing.JFrame {
 
         lugar = (Ubicacion) this.cb_lugarEmergencia.getSelectedItem();
         Caso emergencia = new Caso(ranking, lugar, lugar.getNombre(), mapa, temporal);
-        emergencia.run();
+        emergencia.start();
     }//GEN-LAST:event_bt_sendEemergencyMouseClicked
 
     private void bt_emergenciasMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bt_emergenciasMouseClicked
-        if(mapa.getEdgeCount() >= mapa.getNodeCount()-1){
-        DefaultComboBoxModel modelo = new DefaultComboBoxModel();
-        for (int i = 0; i < this.ubicaciones.size(); i++) {
-            for (Node nodo : mapa.getEachNode()) {
-                if(nodo.getId() == ubicaciones.get(i).getNombre()){
-                    modelo.addElement(ubicaciones.get(i));
+        if (mapa.getEdgeCount() >= mapa.getNodeCount() - 1) {
+            DefaultComboBoxModel modelo = new DefaultComboBoxModel();
+            for (int i = 0; i < this.ubicaciones.size(); i++) {
+                for (Node nodo : mapa.getEachNode()) {
+                    if (nodo.getId() == ubicaciones.get(i).getNombre()) {
+                        modelo.addElement(ubicaciones.get(i));
+                    }
                 }
+
             }
-            
-        }
-        this.cb_lugarEmergencia.setModel(modelo);
-        showDialog(this.jd_emergencias);
-        }else{
+            this.cb_lugarEmergencia.setModel(modelo);
+            showDialog(this.jd_emergencias);
+        } else {
             JOptionPane.showMessageDialog(this, "Todos sus nodos deben estar conectados para esta funcion");
         }
     }//GEN-LAST:event_bt_emergenciasMouseClicked
@@ -1470,7 +1366,17 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel45;
     private javax.swing.JLabel jLabel46;
     private javax.swing.JLabel jLabel47;
+    private javax.swing.JLabel jLabel48;
+    private javax.swing.JLabel jLabel49;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel50;
+    private javax.swing.JLabel jLabel51;
+    private javax.swing.JLabel jLabel52;
+    private javax.swing.JLabel jLabel53;
+    private javax.swing.JLabel jLabel54;
+    private javax.swing.JLabel jLabel55;
+    private javax.swing.JLabel jLabel56;
+    private javax.swing.JLabel jLabel57;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
